@@ -9,10 +9,8 @@
 // }
 
 // // UNDERSTANDING FUNCTIONS
+let saveEl = document.getElementById("save-el")
 let countEL = document.getElementById("count-el");
-
-console.log(countEL);
-
 let count = 0
 
 function increment() {
@@ -21,7 +19,9 @@ function increment() {
 }
 
 function save() {
-    console.log(count)
+    let countStr = count + " - " //a variable that contains both the dashes and the separator
+    saveEl.textContent += countStr //rendering the variable in the saveEl using innerTex
+    // console.log(count)
 }
 
 save()
