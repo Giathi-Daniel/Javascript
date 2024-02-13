@@ -9,14 +9,13 @@
 // }
 
 // // UNDERSTANDING FUNCTIONS
-let lapsComplete = 0
+let countEL = document.getElementById("count-el");
 
-function incrementLAp() {
-    lapsComplete += 1
+console.log(countEL);
+
+let count = 0
+
+function increment() {
+    count += 1
+    countEL.innerText = count
 }
-
-incrementLAp()
-incrementLAp()
-incrementLAp()
-
-console.log(lapsComplete)
