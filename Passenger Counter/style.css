@@ -11,7 +11,12 @@ body {
     font-weight: bold;
     text-align: center;
     color: #fff;
-    block-size: 100%;
+    block-size: 100vh;
+}
+
+div {
+    max-inline-size: 100%;
+    margin-block-start: 16rem;
 }
 h1 {
     margin-block-start: 10px;
