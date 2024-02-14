@@ -1,16 +1,20 @@
 let firstCard = 6
 let secondCard = 9
-let sum = firstCard + secondCard + 6
+let sum = firstCard + secondCard + 20
 let hasBlackJack = false 
+let message = ""
+let isAlive = true
 
 if (sum <= 20) {
-    alert("Do you want to draw a new card? 🙂")
+    message = "Do you want to draw a new card? 🙂"
 } else if (sum === 21) {
-    alert("Wohoo! You've got Blackjack! 🥳")
+    message = "Wohoo! You've got Blackjack! 🥳"
     hasBlackJack = true
 } else {
-    alert("Whooops! You loose! 😭")
+    message = "Whooops! You loose! 😭"
+    isAlive = false
 } 
 
 // CASH OUT
+alert(message)
 alert(hasBlackJack)
