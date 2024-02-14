@@ -6,6 +6,6 @@ if (sum < 21) {
     alert("Do you want to draw a new card? 🙂")
 } else if (sum === 21) {
     alert("Wohoo! You've got Blackjack! 🥳")
-} else (sum > 21) {
+} else {
     alert("Whooops! You loose! 😭")
 } 
