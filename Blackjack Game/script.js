@@ -1,5 +1,5 @@
-let firstCard = 6;
-let secondCard = 9;
+let firstCard = 10;
+let secondCard = 10;
 let sum = firstCard + secondCard + 6;
 let hasBlackJack = false;
 let message = "";
