@@ -11,18 +11,7 @@ let cardsEl = document.getElementById("cards-el");
 let sumEl = document.querySelector("#sum-el");
 
 function startGame() {
-    cardsEl.textContent = "Cards: " + cards[0] + ", " + cards[1]
-    sumEl.textContent = "Sum: " + sum
-    if (sum <= 20) {
-        message = "Do you want to draw a new card?";
-    } else if (sum === 21) {
-        message = "Wohoo! You've got Blackjack!";
-        hasBlackJack = true;
-    } else {
-        message = "Whoops! You lose!";
-        isAlive = false;
-    }
-    messageEl.textContent = message;
+    displayGameInfo();
 }
 
 function newCard() {
@@ -34,7 +23,13 @@ function newCard() {
     cardsEl.textContent += ", " + card;
     sumEl.textContent = "Sum: " + sum;
 
-    // Check if the player is still alive or has blackjack
+    displayGameInfo();
+}
+
+function displayGameInfo() {
+    cardsEl.textContent = "Cards: " + cards.join(", ");
+    sumEl.textContent = "Sum: " + sum;
+
     if (sum <= 20) {
         message = "Do you want to draw a new card?";
     } else if (sum === 21) {
