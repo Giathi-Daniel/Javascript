@@ -1,15 +1,21 @@
-let firstCard = 10;
-let secondCard = 1;
-let cards = [firstCard, secondCard];
-let sum = firstCard + secondCard;
-let hasBlackJack = false;
-let message = "";
-let isAlive = true;
+//Create the player object. Give it two keys, name and chips, and set their values
+let player = {
+    name: "Daniel Giathi",
+    chips: 19
+}
+let cards = []
+let sum = 0
+let hasBlackJack = false
+let isAlive = false
+let message = ""
+let messageEl = document.getElementById("message-el")
+let sumEl = document.getElementById("sum-el")
+let cardsEl = document.getElementById("cards-el")
+// 3. Grab ahold of the player-el paragraph and store it in a variable called playerEl
+let playerEl = document.getElementById("player-el")
 
-let messageEl = document.getElementById("message-el");
-let cardsEl = document.getElementById("cards-el");
-let sumEl = document.querySelector("#sum-el");
-
+// 4. Render the player's name and chips in playerEl
+playerEl.textContent = player.name + ": $" + player.chips
 
 
 
