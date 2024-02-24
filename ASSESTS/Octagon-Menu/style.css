@@ -60,6 +60,33 @@ body {
     block-size: 2px;
     border-radius: 2px;
     background: var(--clr);
+    transform: rotate(calc(var(--i) * 90deg)) translate(0, 25px);
+    transition: block-size .5s, inline-size .5s, transform .5s;
+    transition-delay: 0s, 0s, 0s;
+}
+
+.menu.active li a::before {
+    inline-size: 60px;
+    block-size: 60px;
+    border: 2px solid var(--clr);
+    box-sizing: border-box;
+    background: transparent;
+    transform: rotate(calc(var(--i) * 90deg)) translate(0px, 0px);
+    transition: transform .5s, block-size .5s, inline-size .5s;
+    transition-delay: 1s, 1.5s, 1.5s;
+    rotate: 135deg;
+}
+
+.menu.active li:hover a::before {
+    background: var(--clr);
+    color: #fff;
+    box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr), 0 0 50px var(--clr);
+}
+
+.menu.active li:hover a .fa {
+    position: relative;
+    color: #2f363e;
+    z-index: 1000000;
 }
 
 .menuToggle {
