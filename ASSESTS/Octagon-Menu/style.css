@@ -79,8 +79,28 @@ body {
 
 .menu.active li:hover a::before {
     background: var(--clr);
-    color: #fff;
+    color: #0000;
     box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr), 0 0 50px var(--clr);
+}
+
+.menu li a::after {
+    content: '';
+    position: absolute;
+    inset-inline-start: 50px;
+    inline-size: 20px;
+    block-size: 2px;
+    background: var(--clr);
+    z-index: -1;
+    transform: rotate(calc(var(--i) * 0deg)) translate(15px, 0px);
+    transition: .5s;
+    transition-delay: .5s;
+}
+
+.menu.active li a::after {
+    inset-inline-start: 10px;
+    inline-size: 40px;
+    transition-delay: .5s;
+    transform: rotate(calc(var(--i) * 45deg)) translate(50px, 0px);
 }
 
 .menu.active li:hover a .fa {
