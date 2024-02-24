@@ -34,8 +34,16 @@
         <a href="#"><i class="fas fa-video"></i></a>
       </li>
       <li style="--i: 7; --clr: #01bdab">
-        <a href="#"><i class="fas fa-gamepad-modern"></i></a>
+        <a href="#"><i class="fas fa-shopping-basket"></i></a>
       </li>
     </ul>
+
+    <script>
+      let menuToggle = document.querySelector(".menuToggle");
+      let menu = document.querySelector(".menu");
+      menuToggle.onclick = function () {
+        menu.classList.toggle("active");
+      };
+    </script>
   </body>
 </html>
