@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-block-size: 100vh;
+    background: #2f363e;
+}
+
+.menu {
+    position: relative;
+    inline-size: 260px;
+    block-size: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li {
+    position: absolute;
+    inset-inline-start: 0;
+    list-style-type: none;
+    transform-origin: 130px;
+    transition: .5s;
+    transform: rotate(0deg) translateX(100px);
+}
+
+.menuToggle {
+    position: absolute;
+    inline-size: 60px;
+    block-size: 60px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 2em;
+    transition: transform 1.5s;
+}
