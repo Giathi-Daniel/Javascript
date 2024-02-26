@@ -4,11 +4,14 @@ const saveBtn = document.getElementById('input-btn');
 const listEl = document.getElementById("ul-el")
 
 saveBtn.addEventListener("click", function(){
-    // myLeads.push(inputEl.value);
-    // console.log('myLeads', myLeads);
-
-    for (let i = 0; i < myLeads.length; i++) {
-        // listEl.textContent += myLeads[i];
-        listEl.innerHTML += `<li>${myLeads[i]}</li>`;
-    }
+    myLeads.push(inputEl.value);
+    console.log('myLeads', myLeads);
 })
+
+let listItems = ""
+for (let i = 0; i < myLeads.length; i++) {
+    listItems += `<li>${myLeads[i]}</li>`;
+    console.log('listItems', listItems);
+    
+    listEl.innerHTML = listItems;
+}
