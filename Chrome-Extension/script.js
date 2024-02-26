@@ -5,13 +5,15 @@ const listEl = document.getElementById("ul-el")
 
 saveBtn.addEventListener("click", function(){
     myLeads.push(inputEl.value);
-    console.log('myLeads', myLeads);
+    return renderLeads();
 })
 
-let listItems = ""
-for (let i = 0; i < myLeads.length; i++) {
-    listItems += `<li>${myLeads[i]}</li>`;
-    console.log('listItems', listItems);
-    
-    listEl.innerHTML = listItems;
+function renderLeads() {
+    let listItems = ""
+    for (let i = 0; i < myLeads.length; i++) {
+        listItems += `<li>${myLeads[i]}</li>`;
+        console.log('listItems', listItems);
+        
+        listEl.innerHTML = listItems;
+    }
 }
