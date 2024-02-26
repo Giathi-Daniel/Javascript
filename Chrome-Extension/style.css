@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+input {
+    position: relative;
+    max-inline-size: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #5f9341;
+    margin: 4rem;
+}
+
+button {
+    background: #5f9341;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    margin-block-end: 4px;
+}
