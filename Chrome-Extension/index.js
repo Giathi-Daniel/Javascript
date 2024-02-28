@@ -14,6 +14,8 @@ if (storage) {
 //clear localStorage when double-clicked!
 deleteBtn.addEventListener("dblclick", () => {
     localStorage.clear()
+    myLeads = []
+    renderLeads()
 })
 
 inputBtn.addEventListener("click", function() {
