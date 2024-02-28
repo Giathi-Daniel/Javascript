@@ -22,3 +22,21 @@ function renderLeads() {
     }
     ulEl.innerHTML = listItems  
 }
+
+
+
+
+
+// WORKING WITH JSON
+let myLeadS = `["www.w3schools.com"]`
+
+// converting string to an object
+myLeadS = JSON.parse(myLeadS);
+alert(typeof myLeadS)
+
+// addding a new element to the object
+myLeadS.push("www.google.com")
+
+// convertin back object to a string
+myLeadS  = JSON.stringify(myLeadS)
+alert(typeof myLeadS)
