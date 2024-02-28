@@ -3,9 +3,19 @@ const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 
+let storage = JSON.parse(localStorage.getItem("myLeads"));
+alert(storage)
+
+if (storage) {
+    myLeads = storage;
+    renderLeads()
+}
+
 inputBtn.addEventListener("click", function() {
     myLeads.push(inputEl.value)
     inputEl.value = ""
+    // saving the myLeads array to localStorage
+    localStorage.setItem("myLeads", JSON.stringify(myLeads))
     renderLeads()
 })
 
@@ -27,16 +37,16 @@ function renderLeads() {
 
 
 
-// WORKING WITH JSON
-let myLeadS = `["www.w3schools.com"]`
+// // WORKING WITH JSON
+// let myLeadS = `["www.w3schools.com"]`
 
-// converting string to an object
-myLeadS = JSON.parse(myLeadS);
-alert(typeof myLeadS)
+// // converting string to an object
+// myLeadS = JSON.parse(myLeadS);
+// alert(typeof myLeadS)
 
-// addding a new element to the object
-myLeadS.push("www.google.com")
+// // addding a new element to the object
+// myLeadS.push("www.google.com")
 
-// convertin back object to a string
-myLeadS  = JSON.stringify(myLeadS)
-alert(typeof myLeadS)
+// // convertin back object to a string
+// myLeadS  = JSON.stringify(myLeadS)
+// alert(typeof myLeadS)
