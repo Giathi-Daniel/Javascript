@@ -4,7 +4,7 @@
 
 const totalPrice = 420.69235632455
 const btn = document.getElementById("purchase-btn")
-
+// btn.textContent = `Buy €${ roundedPrice.toFixed(2) }`
 
 // METHOD 1
 // const roundedPrice = Math.floor(totalPrice * 100 ) / 100
