@@ -16,7 +16,11 @@ const tabs = [
 ]
 
 tabBtn.addEventListener("click", function() {
-    console.log(tabs[0].url)
+    // localStorage.setItem("tabs", JSON.parse())
+    // console.log(tabs[0].url)
+    myLeads.push(tabs[0].url);
+    localStorage.setItem("myLeads", JSON.stringify(myLeads));
+    render(myLeads)
 })
 // Refector the function so that it takes a parameter, leads, that it uses
 // instead of the global myLeads variable. Remember to update all invocations 
