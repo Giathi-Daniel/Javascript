@@ -27,5 +27,17 @@ let data = [
 
 // Use both a for loop and a template string to solve the challenge
 function generateSentence(desc, arr) {
-    b
+    let sentence = `The ${arr.length} ${desc} are`
+    const lastIndex = arr.length - 1 //to avoid comma
+    for (let i = 0; i < arr.length; i++) {
+        if (i === lastIndex) {
+            sentence += arr[i]
+        } else {
+            sentence += arr[i] + ", "
+        }
+    }
+    return sentence
 }
+
+const generate = generateSentence("most paid programming languages", ["Javascript", "Python"])
+console.log(generate)
