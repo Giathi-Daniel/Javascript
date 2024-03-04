@@ -15,3 +15,4 @@ const btn = document.getElementById("purchase-btn")
 const roundedPrice = Math.round(totalPrice * 100) / 100
 console.log(roundedPrice)
 btn.textContent = `Buy €${ roundedPrice }`
+HTMLVideoElement
