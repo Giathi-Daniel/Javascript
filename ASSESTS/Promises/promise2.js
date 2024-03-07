@@ -19,7 +19,7 @@ function displayImage(image) {
 }
 
 // implementation for loadImage(url) nad displayImage(image)
-const imageUrl = "https://via.placeholder.com/150";
+const imageUrl = "https://unsplash.com/s/photos/fresh-carrot";
 
 loadImage(imageUrl).then((image) => {
     console.log("Image loaded successfully");
