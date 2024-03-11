@@ -1,0 +1,15 @@
+/* ******************* 1280 px ************************ */
+@media screen and (max-width: 1200px) {
+    header {
+        padding: 20px 50px;
+    }
+
+    header .menu {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: 5px 15px 35px rgba(0, 0, 0, .5);
+    }
+}
