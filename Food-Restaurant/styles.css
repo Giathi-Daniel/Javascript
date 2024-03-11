@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Ubuntu:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+
+/* ******************* GENERAL STYLING************************ */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #333;
+    font-family: 'Manrope', sans-serif;
+}
+
+body::before {
+    position: fixed;
+    content: '';
+    left: -10px;
+    bottom: -10px;
+    block-size: 300px;
+    inline-size: 300px;
+    background: #ff2e5f;
+    filter: blur(150px);
+    z-index: -1;
+}
+
+body::after {
+    position: fixed;
+    content: '';
+    left: -10px;
+    bottom: -10px;
+    block-size: 200px;
+    inline-size: 200px;
+    background: #f9f52c;
+    filter: blur(150px);
+    z-index: -1;
+}
+
+/* ******************* NAV STYLING************************ */
