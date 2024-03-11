@@ -475,3 +475,86 @@ header a.btn1:hover {
     font-size: 0.9em;
     text-align: justify;
 }
+
+
+/* ******************* FOOTER SECTION Styling ************************ */
+.contact {
+    min-block-size: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 0;
+    inline-size: 100%;
+}
+
+.contact .contactBx {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inline-size: 80%;
+    flex-direction: column;
+    box-shadow: 0px 15px 35px rgba(0, 0, 0, .5);
+    background: rgba(255, 255, 255, .05);
+    border-radius: 12px;
+    padding: 40px;
+}
+
+.contact .contactBx .input {
+    inline-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .contactBx .input .inputBx {
+    position: relative;
+    inline-size: 100%;
+    margin: 10px;
+}
+
+.contact .contactBx .input .inputBx input,
+.contact .contactBx .input .inputBx textarea {
+    padding: 20px 29px;
+    inline-size: 100%;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, .05);
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: var(--font-color);
+    margin-bottom: 30px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.contact .contactBx .input .inputBx textarea {
+    inline-size: 100%;
+    block-size: 250px;
+    resize: none;
+}
+
+.contact .contactBx .input .inputBx input::placeholder,
+.contact .contactBx .input .inputBx textarea::placeholder {
+    color: var(--font-color);
+}
+
+.contact .contactBx a {
+    position: relative;
+    font-size: 1em;
+    color: var(--font-color);
+    background: var(--secondary-color);
+    display: inline-block;
+    padding: 15px 30px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-start-start-radius: 20px;
+    border-end-end-radius: 20px;
+    transition: .5s;
+}
+
+.contact .contactBx a:hover {
+    border-start-start-radius: 0px;
+    border-end-end-radius: 0px;
+    border-start-end-radius: 20px;
+    border-end-start-radius: 20px;
+}
