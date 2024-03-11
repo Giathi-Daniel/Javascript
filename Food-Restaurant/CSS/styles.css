@@ -488,6 +488,12 @@ header a.btn1:hover {
     inline-size: 100%;
 }
 
+.contact .heading {
+    font-size: 3em;
+    color: var(--font-color);
+    font-family: 'Ubuntu' sans-serif;
+}
+
 .contact .contactBx {
     display: flex;
     justify-content: center;
