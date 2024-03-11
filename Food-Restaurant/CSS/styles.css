@@ -467,7 +467,7 @@ header a.btn1:hover {
 .delivery .delivery-info .delivery-box .infoBox h5 {
     font-size: 1.3em;
     color: var(--font-color);
-    margin-bottom: 10px;
+    margin-block-end: 10px;
 }
 
 .delivery .delivery-info .delivery-box .infoBox p {
@@ -523,7 +523,7 @@ header a.btn1:hover {
     outline: none;
     font-size: 1em;
     color: var(--font-color);
-    margin-bottom: 30px;
+    margin-block-end: 30px;
     font-family: 'Ubuntu', sans-serif;
 }
 
