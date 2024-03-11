@@ -71,6 +71,13 @@ header {
     z-index: 1000;
 }
 
+header.sticky {
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .1);
+    background: rgba(255, 255, 255, .05);
+    backdrop-filter: blur(42px);
+}
+
 header .logo {
     color: var(--font-color);
     font-size: 24px;
@@ -208,7 +215,7 @@ header a.btn1:hover {
     border-end-start-radius: 20px;
 }
 
-.banner .containerBx .imgBox {
+.banner .containerBox .imgBox {
     block-size: 500px;
     inline-size: 700px;
     display: flex;
@@ -216,6 +223,75 @@ header a.btn1:hover {
     align-items: center;
 }
 
-.banner .containerBx .imgBox img {
+.banner .containerBox .imgBox img {
     inline-size: 500px;
+}
+
+
+/* ******************* ABOUT SECTION Styling ************************ */
+.about {
+    min-block-size: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 100px;
+}
+
+.about .containerBox .imgBox {
+    block-size: 500px;
+    inline-size: 700px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.about .containerBox .imgBox img {
+    inline-size: 500px;
+}
+
+.about .containerBox .contentBx {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    max-inline-size: 643px;
+}
+
+.about .containerBox .contentBx h5 {
+    color: var(--secondary-color);
+    font-size: 1.5em;
+}
+
+.about .containerBox .contentBx h1 {
+    color: var(--font-color);
+    font-size: 4em;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.about .containerBox .contentBx p {
+    color: #C9C5C5;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.about .containerBox .contentBx a {
+    position: relative;
+    font-size: 1em;
+    color: var(--font-color);
+    background: var(--secondary-color);
+    display: inline-block;
+    padding: 10px 30px;
+    margin: 15px 0;
+    inline-size: 150px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-start-start-radius: 20px;
+    border-end-end-radius: 20px;
+    transition: .5s;
+}
+
+.about .containerBox .contentBx a:hover {
+    border-start-start-radius: 0px;
+    border-end-end-radius: 0px;
+    border-start-end-radius: 20px;
+    border-end-start-radius: 20px;
 }
