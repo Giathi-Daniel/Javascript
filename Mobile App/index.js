@@ -7,15 +7,19 @@ const appSettings = {
 
 const app = initializeApp(appSettings)
 const database = getDatabase(app)
-const moviesInDB = ref(database, "movies")
+const shopDB = ref(database, "shoppingList")
 
 const inputFieldEl = document.getElementById("input-field")
 const addButtonEl = document.getElementById("add-button")
 
-addButtonEl.addEventListener("click", function() {
+addButtonEl.addEventListener("click", ()=> {
     let inputValue = inputFieldEl.value
     
-    push(moviesInDB, inputValue)
-    
+    push(shopDB, inputValue)
+
     console.log(`${inputValue} added to database`)
 })
+
+    
+    
+    
