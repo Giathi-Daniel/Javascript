@@ -9,12 +9,12 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    max-width: 320px;
+    max-inline-size: 320px;
     margin: 30px auto;
 }
 
 img {
-    width: 150px;
+    inline-size: 150px;
     margin: 0 auto;
 }
 

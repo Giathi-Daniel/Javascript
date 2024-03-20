@@ -11,15 +11,26 @@ const shopDB = ref(database, "shoppingList")
 
 const inputFieldEl = document.getElementById("input-field")
 const addButtonEl = document.getElementById("add-button")
+const shoppingEl = document.getElementById("shoppingList")
 
 addButtonEl.addEventListener("click", ()=> {
     let inputValue = inputFieldEl.value
     
     push(shopDB, inputValue)
 
+    clearInput()
+
+    appendValue(inputValue)
+
     console.log(`${inputValue} added to database`)
 })
 
-    
+function clearInput(){
+    inputFieldEl.value = ""
+}
+
+function appendValue(itemValue){
+    shoppingEl.innerHTML = `<li>${itemValueinputValue}</li>`
+}
     
     
