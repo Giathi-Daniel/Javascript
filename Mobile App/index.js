@@ -30,7 +30,7 @@ function clearInput(){
 }
 
 function appendValue(itemValue){
-    shoppingEl.innerHTML = `<li>${itemValueinputValue}</li>`
+    shoppingEl.innerHTML = `<li>${itemValue}</li>`
 }
     
     
