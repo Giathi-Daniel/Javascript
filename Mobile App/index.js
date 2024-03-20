@@ -1,12 +1,21 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
+import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 
 const appSettings = {
-    databaseUrl: "https://mobileapp-f4cf9-default-rtdb.firebaseio.com/"
+    databaseURL: "https://mobileapp-f4cf9-default-rtdb.firebaseio.com/"
 }
-const output = document.getElementById("input-field");
-const btnOutput = document.getElementById("add-button");
 
-btnOutput.addEventListener('click', ()=> {
-    let inputValue = output.value;
+const app = initializeApp(appSettings)
+const database = getDatabase(app)
+const moviesInDB = ref(database, "movies")
+
+const inputFieldEl = document.getElementById("input-field")
+const addButtonEl = document.getElementById("add-button")
+
+addButtonEl.addEventListener("click", function() {
+    let inputValue = inputFieldEl.value
+    
+    push(moviesInDB, inputValue)
+    
     console.log(`${inputValue} added to database`)
 })
