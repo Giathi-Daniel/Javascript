@@ -10,14 +10,24 @@
       src="https://kit.fontawesome.com/4d1c965a0a.js"
       crossorigin="anonymous"
     ></script>
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <ul class="nav justify-content-between mx-4 mt-0 w-full px-6">
-      <a href="/orders">orders</a>
-      <a href="/orders">assigned</a>
-      <a href="/orders" class="account text-center">account</a>
-      <a href="/orders">notifications</a>
-      <a href="orders.html">logout</a>
-    </ul>
+    <div class="container">
+      <a href="" class="logo">
+        <i class="fa fa-pencil"></i> &nbsp; Advanced Writers
+      </a>
+
+      <navbar class="nav">
+        <ul>
+          <a href="/orders">orders</a>
+          <a href="/orders">assigned</a>
+          <a href="/orders" class="account">account</a>
+          <a href="/orders"><i class="fa-regular fa-bell"></i><span>0</span></a>
+          <a href="orders.html">logout</a>
+        </ul>
+      </navbar>
+    </div>
   </body>
 </html>

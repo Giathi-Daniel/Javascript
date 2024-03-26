@@ -1,1 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+    scroll-behavior: smooth;
+}
+
+html {
+    font-size: medium;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-inline-size: 80rem;
+    background-color: rgb(76 29 149);
+    /* padding-block-end: 3rem;
+    padding-block-start: 3rem; */
+    margin: 3rem auto 3rem auto;
+    position: fixed;
+    inset-inline-start: 0;
+    inset-inline-end: 0;
+    border-radius: 6.17rem;
+    padding: 30px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    inline-size: 100%;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-family: 'Noto Sans', sans-serif;
+    padding-block-start: .5rem;
+    padding-block-end: .5rem;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+.container .nav {
+    margin-inline-start: -600px;
+}
+
+.nav ul a {
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.475rem;
+    line-height: 1.25rem;
+    cursor: pointer;
+}
+
+.nav .account {
+    background-color: rgb(186 114 100);
+    border-radius: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    padding-block-end: .5rem;
+    padding-block-start: .5rem;
+}
