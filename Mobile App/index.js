@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
-import { getDatabase, ref, push } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
+import { getDatabase, ref,  push, onValue } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 
 const appSettings = {
     databaseURL: "https://mobileapp-f4cf9-default-rtdb.firebaseio.com/"
@@ -20,17 +20,38 @@ addButtonEl.addEventListener("click", ()=> {
 
     clearInput()
 
-    appendValue(inputValue)
-
     console.log(`${inputValue} added to database`)
 })
+
+// the onValue functions runs whenever there are changes in the db
+onValue(shopDB, function(snapshot) {
+    let itemsArray = Object.values(snapshot.val()) 
+    
+    clearShopping()
+    
+    for (let i = 0; i < itemsArray.length; i++) {
+        let itemsArrayItem = itemsArray[i]
+
+        appendValue(itemsArrayItem)
+        // console.log(itemsArrayItem)
+    }
+    
+})
+
+function clearShopping() {
+    shoppingEl.innerHTML = ""
+}
 
 function clearInput(){
     inputFieldEl.value = ""
 }
 
 function appendValue(itemValue){
-    shoppingEl.innerHTML = `<li>${itemValue}</li>`
+    // Create a new list item
+    let li = document.createElement('li');
+    li.textContent = itemValue;
+    // Append the list item to the shopping list
+    shoppingEl.appendChild(li);
 }
     
     
