@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
-import { getDatabase, ref,  push, onValue } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
+import { getDatabase, ref,  push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 
 const appSettings = {
     databaseURL: "https://mobileapp-f4cf9-default-rtdb.firebaseio.com/"
@@ -55,8 +55,15 @@ function appendValue(item){
     let itemID = item[0]
     let itemValue = item[1]
 
-    let li = document.createElement('li');
-    li.textContent = itemValue;
+    let newEl = document.createElement("div")
+    newEl.textContent = itemValue
+
+    newEl.addEventListener("dblclick", () => {
+        let exactItemLocationInDB = ref(database, `shoppingList/${itemID}`)
+
+        remove(exactItemLocationInDB)
+        console.log(itemID)
+    })
     
     shoppingEl.appendChild(li);
 }
