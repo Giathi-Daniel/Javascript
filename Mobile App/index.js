@@ -25,15 +25,20 @@ addButtonEl.addEventListener("click", ()=> {
 
 // the onValue functions runs whenever there are changes in the db
 onValue(shopDB, function(snapshot) {
-    let itemsArray = Object.values(snapshot.val()) 
+    let itemsArray = Object.entries(snapshot.val()) 
     
     clearShopping()
     
     for (let i = 0; i < itemsArray.length; i++) {
+
         let itemsArrayItem = itemsArray[i]
 
+        let currentItemId = itemsArrayItem[0]
+        let currentItemValue = itemsArrayItem[1]
+
         appendValue(itemsArrayItem)
-        // console.log(itemsArrayItem)
+        console.log(currentItemId)
+        console.log(currentItemValue)
     }
     
 })
