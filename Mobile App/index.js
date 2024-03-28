@@ -51,11 +51,13 @@ function clearInput(){
     inputFieldEl.value = ""
 }
 
-function appendValue(itemValue){
-    // Create a new list item
+function appendValue(item){
+    let itemID = item[0]
+    let itemValue = item[1]
+
     let li = document.createElement('li');
     li.textContent = itemValue;
-    // Append the list item to the shopping list
+    
     shoppingEl.appendChild(li);
 }
     
