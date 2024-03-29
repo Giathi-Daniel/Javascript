@@ -11,7 +11,7 @@ const shoppingListInDB = ref(database, "shoppingList")
 
 const inputFieldEl = document.getElementById("input-field")
 const addButtonEl = document.getElementById("add-button")
-const shoppingListEl = document.getElementById("shoppingList")
+const shoppingListEl = document.getElementById("shopping-list")
 
 addButtonEl.addEventListener("click", function() {
     let inputValue = inputFieldEl.value
@@ -22,17 +22,25 @@ addButtonEl.addEventListener("click", function() {
 })
 
 onValue(shoppingListInDB, function(snapshot) {
-    let itemsArray = Object.entries(snapshot.val())
+    // Challenge: Change the onValue code so that it uses snapshot.exists() to show items when there are items in the database and if there are not displays the text 'No items here... yet'.
     
-    clearShoppingListEl()
+    if (snapshot.exists()) {
+        let itemsArray = Object.entries(snapshot.val())
     
-    for (let i = 0; i < itemsArray.length; i++) {
-        let currentItem = itemsArray[i]
-        let currentItemID = currentItem[0]
-        let currentItemValue = currentItem[1]
+        clearShoppingListEl()
         
-        appendItemToShoppingListEl(currentItem)
+        for (let i = 0; i < itemsArray.length; i++) {
+            let currentItem = itemsArray[i]
+            let currentItemID = currentItem[0]
+            let currentItemValue = currentItem[1]
+            
+            appendItemToShoppingListEl(currentItem)
+        }    
+    } else {
+        shoppingListEl.innerHTML = "No items here..yet"
     }
+    
+    
 })
 
 function clearShoppingListEl() {
@@ -51,7 +59,7 @@ function appendItemToShoppingListEl(item) {
     
     newEl.textContent = itemValue
     
-    newEl.addEventListener("click", function() {
+    newEl.addEventListener("dbclick", function() {
         let exactLocationOfItemInDB = ref(database, `shoppingList/${itemID}`)
         
         remove(exactLocationOfItemInDB)
@@ -59,3 +67,6 @@ function appendItemToShoppingListEl(item) {
     
     shoppingListEl.append(newEl)
 }
+
+
+
