@@ -11,7 +11,7 @@ body {
     display: flex;
     flex-direction: column;
     max-inline-size: 320px;
-    margin: 20rem auto;
+    margin: 30px auto;
 }
 
 img {
