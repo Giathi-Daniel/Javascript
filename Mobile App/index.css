@@ -32,6 +32,12 @@ input {
     margin: 10px 0;
 }
 
+p {
+    font-size: 1.78rem;
+    font-weight: 600;
+    text-align: center;
+}
+
 button {
     color: #FDFDFD;
     background-color: #77303d;
