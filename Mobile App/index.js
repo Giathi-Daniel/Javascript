@@ -22,8 +22,6 @@ addButtonEl.addEventListener("click", function() {
 })
 
 onValue(shoppingListInDB, function(snapshot) {
-    // Challenge: Change the onValue code so that it uses snapshot.exists() to show items when there are items in the database and if there are not displays the text 'No items here... yet'.
-    
     if (snapshot.exists()) {
         let itemsArray = Object.entries(snapshot.val())
     
@@ -39,8 +37,6 @@ onValue(shoppingListInDB, function(snapshot) {
     } else {
         shoppingListEl.innerHTML = "No items here..yet"
     }
-    
-    
 })
 
 function clearShoppingListEl() {
@@ -59,7 +55,7 @@ function appendItemToShoppingListEl(item) {
     
     newEl.textContent = itemValue
     
-    newEl.addEventListener("dbclick", function() {
+    newEl.addEventListener("dbl", function() {
         let exactLocationOfItemInDB = ref(database, `shoppingList/${itemID}`)
         
         remove(exactLocationOfItemInDB)
@@ -67,6 +63,3 @@ function appendItemToShoppingListEl(item) {
     
     shoppingListEl.append(newEl)
 }
-
-
-
