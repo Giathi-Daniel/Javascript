@@ -3,7 +3,7 @@
 /* ********************* GENERAL STYLING ********************** */
 :root {
     --color-primary: rgb(76 29 149);
-    --color-secondary: linear-gradient(from #5b21b6, to #4c1d95);
+    --color-secondary: linear-gradient(to top, #5b21b6, #4c1d95);
     --color-dark: #000;
     --color-heading: rgb(17, 24, 39);
     --color-light: rgb(107, 114, 128);
@@ -40,3 +40,98 @@ section {
 }
 
 /* ********************* GENERAL STYLING END ********************** */
+
+
+/* ********************* FOOTER ********************** */
+footer {
+    background: var(--color-secondary);
+    inset-block-end: 0;
+    margin-block-start: 2rem;
+    padding: 2rem;
+}
+
+.footer_container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.1rem;
+    padding-inline-start: 3rem;
+    margin-inline-end: 10rem;
+    font-size: 1.8rem;
+    color: var(--color-white);
+    font-weight: bold;
+    padding-block-end: 4rem;
+}
+
+.footer_container>div h4 {
+    margin-block-end: 1rem;
+}
+
+.company {
+    display: flex;
+    gap: 1rem;
+}
+
+.company img {
+    inline-size: 90px;
+}
+
+.company h4 {
+    padding-block-start: 2rem;
+}
+
+ul {
+    position: absolute;
+}
+
+ul li {
+    padding-block-start: 0.5rem;
+}
+
+ul li a {
+    color: var(--color-white);
+    font-size: 1.5rem;
+    font-weight: 0;
+    position: relative;
+    transition: var(--transition);
+    inset-inline-start: 0;
+}
+
+ul li a:hover {
+    inset-inline-start: 20px;
+}
+
+.socials {
+    display: flex;
+    gap: 2rem;
+}
+
+.socials i {
+    inline-size: 60px;
+    block-size: 60px;
+    border: 3px solid #dd8110fa;
+    padding: 0.7rem;
+    border-radius: 50%;
+    display: flex;
+    color: #dd8110fa;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    transition: transform var(--transition);
+}
+
+.footer_container .socials i:hover {
+    transform: translateY(-10px);
+}
+
+.copyright {
+    text-align: center;
+    justify-content: center;
+    padding: 7rem 0 3rem 0;
+}
+
+p {
+    color: var(--color-white);
+    font-size: 1.5rem;
+}
+
+/* ********************* FOOTER END ********************** */
