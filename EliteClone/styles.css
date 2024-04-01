@@ -11,7 +11,7 @@
 
     --container-width-lg: 80%;
     --container-width-md: 90%;
-    --container-width-sm: 94%;
+    --container-width-sm: 100%;
 
     --transition: all 400ms ease;
 }
@@ -45,9 +45,8 @@ section {
 /* ********************* FOOTER ********************** */
 footer {
     background: var(--color-secondary);
-    inset-block-end: 0;
-    margin-block-start: 2rem;
-    padding: 2rem;
+    padding: 3rem 2rem 0;
+    inset-inline-end: 10rem;
 }
 
 .footer_container {
@@ -135,3 +134,84 @@ p {
 }
 
 /* ********************* FOOTER END ********************** */
+
+
+/* ********************* MEDIA QUERIES ********************** */
+/* ================ TABLETS =============== */
+@media screen and (max-width: 1024px) {
+    .footer {
+        padding-block-end: 0;
+    }
+
+    .container {
+        inline-size: var(--container-width-md);
+    }
+
+    .footer_container {
+        margin-inline-start: -3rem;
+        margin-inline-end: 1rem;
+        font-size: 1rem;
+        font-weight: 500;
+        padding-block-end: 0;
+        inline-size: 100%;
+    }
+
+    .company {
+        gap: 0.5rem;
+    }
+
+    .company img {
+        inline-size: 50px;
+    }
+
+    .company h4 {
+        inline-size: 100%;
+    }
+
+    ul li a {
+        font-size: 1.05rem;
+    }
+
+    .socials i {
+        inline-size: 40px;
+        block-size: 40px;
+        gap: 0.5rem;
+    }
+
+    .copyright p {
+        font-size: 1rem;
+        padding-block-end: 0.1rem;
+    }
+}
+
+/* ================ MEDIUM SCREENS =============== */
+@media screen and (max-width: 764px) {
+    .footer {
+        font-weight: 200;
+    }
+
+    /* .company {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    } */
+
+    .company h4 {
+        font-size: 18px;
+        padding-block-start: 0;
+        margin-inline-end: 1rem;
+    }
+}
+
+
+/* ================ SMALLER SCREENS =============== */
+@media screen and (max-width: 600px) {
+    .footer_container {
+        grid-template-columns: 1fr;
+        row-gap: 10rem;
+    }
+
+    .copyright {
+        padding: 3rem 0 3rem 0;
+        text-align: start;
+    }
+}
