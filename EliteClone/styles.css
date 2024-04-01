@@ -24,6 +24,10 @@
     list-style: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Noto Sans', sans-serif;
     line-height: 1.5;
@@ -233,8 +237,7 @@ p {
         font-size: 1.5rem;
     }
 
-    .footer_container .resources,
-    .footer_container .legal {
+    .footer_container :is(.resources, .legal) {
         padding-block-end: 10rem;
     }
 
@@ -279,8 +282,7 @@ p {
         margin-inline-start: -1rem;
     }
 
-    .footer_container .resources,
-    .footer_container .legal {
+    .footer_container :is(.resources, .legal) {
         padding-block-end: 7rem;
     }
 
