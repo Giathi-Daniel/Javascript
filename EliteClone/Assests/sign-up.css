@@ -42,24 +42,24 @@ form {
     overflow: hidden;
 }
 
-.form_main {
+.form_option {
     background: var(--color-secondary);
     padding: 10rem 1rem;
     border-start-start-radius: inherit;
 }
 
-.form_main h1 {
+.form_option h1 {
     color: #fff;
     font-size: 1.5rem;
 }
 
-.form_main p {
+.form_option p {
     font-size: max(1rem, 80%);
     text-align: center;
     padding-block: 1rem;
 }
 
-.form_main input[type="submit"] {
+.form_option input[type="submit"] {
     border-radius: 7rem;
     padding: 1rem 2rem;
     outline: 0;
@@ -68,25 +68,76 @@ form {
     font-size: max(1rem, 80%);
     background: var(--color-btn);
     color: #fff;
-    font-weight: bold;
+    font-weight: bolder;
     line-height: 1.5rem;
     cursor: pointer;
 }
 
-.form_text {
+.form_main {
     padding-block-start: 1rem;
     text-align: start;
     background-color: rgb(255, 255, 255);
     padding-inline-start: 1rem;
+    /* gap: 2rem; */
 }
 
-.form_text h2 {
+.form_main h2 {
     margin-block-end: 1rem;
     text-transform: capitalize;
 }
 
 .form_input {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+    display: inline-block;
+    max-inline-size: 100%;
+}
+
+.form_main label,
+.form_input label {
+    display: block;
+    color: #000;
+}
+
+.form_input input {
+    padding-block: 0.5rem;
+    border-radius: 0.5rem;
+    outline: none;
+    border: 1px solid lightgrey;
+    font-size: 1.2rem;
+    margin-block-start: .5rem;
+    margin-block-end: 1rem;
+    justify-content: center;
+    color: rgb(125, 121, 121);
+    transition: var(--transition);
+}
+
+.form_main input {
+    display: block;
+    inline-size: 94%;
+    padding-block: 0.5rem;
+    padding-inline-start: 7px;
+    border-radius: 0.5rem;
+    outline: none;
+    border: 1px solid lightgrey;
+    font-size: 1.2rem;
+    margin-block-start: .5rem;
+    margin-block-end: 1rem;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.form_main input[type="submit"] {
+    border-radius: 7rem;
+    outline: 0;
+    border: none;
+    text-transform: uppercase;
+    font-size: max(1rem, 80%);
+    background: var(--color-btn);
+    color: #fff;
+    font-weight: bolder;
+    line-height: 1.5rem;
+    cursor: pointer;
+}
+
+input:focus {
+    border: 3px solid var(--color-btn);
 }
