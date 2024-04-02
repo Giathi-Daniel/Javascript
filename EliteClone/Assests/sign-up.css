@@ -7,6 +7,7 @@
     --color-heading: rgb(17, 24, 39);
     --color-light: rgb(107, 114, 128);
     --color-white: rgb(229, 231, 235);
+    --color-btn: rgb(186, 114, 100);
 
     --container-width-lg: 80%;
     --container-width-md: 90%;
@@ -25,7 +26,7 @@
 
 /* **************************SING UP************************** */
 form {
-    font-size: clamp(1.2rem, 50%, 2rem);
+    /* font-size: clamp(1.2rem, 10px, 0.8rem); */
     text-align: center;
     justify-content: center;
     margin: 0 20rem 30rem;
@@ -43,13 +44,49 @@ form {
 
 .form_main {
     background: var(--color-secondary);
-    padding: 10rem 3rem;
+    padding: 10rem 1rem;
     border-start-start-radius: inherit;
+}
+
+.form_main h1 {
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+.form_main p {
+    font-size: max(1rem, 80%);
+    text-align: center;
+    padding-block: 1rem;
+}
+
+.form_main input[type="submit"] {
+    border-radius: 7rem;
+    padding: 1rem 2rem;
+    outline: 0;
+    border: none;
+    text-transform: uppercase;
+    font-size: max(1rem, 80%);
+    background: var(--color-btn);
+    color: #fff;
+    font-weight: bold;
+    line-height: 1.5rem;
+    cursor: pointer;
 }
 
 .form_text {
     padding-block-start: 1rem;
     text-align: start;
     background-color: rgb(255, 255, 255);
-    opacity: 1;
+    padding-inline-start: 1rem;
+}
+
+.form_text h2 {
+    margin-block-end: 1rem;
+    text-transform: capitalize;
+}
+
+.form_input {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
