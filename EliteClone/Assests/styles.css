@@ -7,7 +7,7 @@
     --color-dark: #000;
     --color-heading: rgb(17, 24, 39);
     --color-light: rgb(107, 114, 128);
-    --color-white: rgb(249, 250, 251);
+    --color-white: rgb(229, 231, 235);
 
     --container-width-lg: 80%;
     --container-width-md: 90%;
@@ -26,12 +26,15 @@
 
 html {
     scroll-behavior: smooth;
+    position: relative;
 }
 
 body {
     font-family: 'Noto Sans', sans-serif;
     line-height: 1.5;
     background: var(--color-white);
+    margin: 0;
+    padding-block-end: 100px;
 }
 
 .container {
@@ -50,7 +53,9 @@ section {
 footer {
     background: var(--color-secondary);
     padding: 3rem 0 0 2rem;
-    margin-block-start: 28.9rem;
+    inline-size: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
 .footer_container {

@@ -6,7 +6,7 @@
     --color-secondary: linear-gradient(to top, #5b21b6, #4c1d95);
     --color-heading: rgb(17, 24, 39);
     --color-light: rgb(107, 114, 128);
-    --color-white: rgb(249, 250, 251);
+    --color-white: rgb(229, 231, 235);
 
     --container-width-lg: 80%;
     --container-width-md: 90%;
@@ -23,7 +23,33 @@
     list-style: none;
 }
 
-.container {
-    inline-size: var(--container-width-lg);
-    margin: 2rem auto 1px auto;
+/* **************************SING UP************************** */
+form {
+    font-size: clamp(1.2rem, 50%, 2rem);
+    text-align: center;
+    justify-content: center;
+    margin: 0 20rem 30rem;
+}
+
+.form_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-start-start-radius: 1rem;
+    border-end-end-radius: 1rem;
+    border-start-end-radius: 3rem;
+    border-end-start-radius: 3rem;
+    overflow: hidden;
+}
+
+.form_main {
+    background: var(--color-secondary);
+    padding: 10rem 3rem;
+    border-start-start-radius: inherit;
+}
+
+.form_text {
+    padding-block-start: 1rem;
+    text-align: start;
+    background-color: rgb(255, 255, 255);
+    opacity: 1;
 }
