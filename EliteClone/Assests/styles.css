@@ -32,6 +32,7 @@ body {
     font-family: 'Noto Sans', sans-serif;
     line-height: 1.5;
     background: var(--color-white);
+    font-size: clamp(1.2rem, 30vw, 2rem);
 }
 
 .container {
