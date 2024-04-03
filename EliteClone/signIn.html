@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg" href="/logo.svg" />
-    <title>Advanced Writers Writers</title>
+    <title>Advanced Writers Writers: Sign Up</title>
     <!-- *** BOOTSTRAP ICONS -->
     <link
       rel="stylesheet"
@@ -42,15 +42,30 @@
     <!-- ========================== FORM ============================= -->
     <form action="https://formspree.io/f/xeqyrnvb" method="POST">
       <div class="container form_container">
-        <div class="form_right">
-          <h1>Sign In</h1>
-          <label for="paswd"></label>
-          <label for="Email <label>
+        <div class="form_option">
+          <h1>Welcome Back!</h1>
+          <p>To keep connected with us please login with your personal info</p>
+          <input type="submit" value="Sign In" />
         </div>
-        <div class="form_left">
-          <h1>Hello!</h1>
-          <p>Enter you personal details and start journey with us</p>
-          
+        <div class="form_main">
+          <h2>Sign up</h2>
+          <div class="form_input">
+            <label for="Name">Name</label>
+            <input type="text" name="Name" id="Name" required />
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required />
+          </div>
+          <div class="form_input">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" placeholder="+254" required />
+            <label for="ID">National ID</label>
+            <input type="text" id="ID" required />
+          </div>
+          <label for="password">Password</label>
+          <input type="password" name="PWD" id="password" required />
+          <label for="confirm">Confirm Password</label>
+          <input type="password" name="PWD" id="confirm" required />
+          <input type="submit" value="Register" />
         </div>
       </div>
     </form>
