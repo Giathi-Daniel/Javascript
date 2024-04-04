@@ -78,7 +78,6 @@ form {
     text-align: start;
     background-color: rgb(255, 255, 255);
     padding-inline-start: 1rem;
-    /* gap: 2rem; */
 }
 
 .form_main h2 {
@@ -140,4 +139,62 @@ form {
 
 input:focus {
     border: 3px solid var(--color-btn);
+}
+
+.sign-up input:hover[type="submit"] {
+    background: rgb(255, 255, 255);
+    color: var(--color-btn);
+    border: 1px solid var(--color-btn);
+}
+
+.sign-up {
+    display: none;
+}
+
+
+
+/* ==============================SIGN IN ============================== */
+.sign-in .form_main {
+    padding-block: 7rem;
+}
+
+.sign-in .form_main h2 {
+    margin-block-end: 3rem;
+}
+
+.sign-in .form_main .sign-in_actions {
+    display: flex;
+    justify-content: space-between;
+    inline-size: 100%;
+}
+
+.sign-in_actions .check {
+    display: flex;
+    gap: .3rem;
+}
+
+.check input[type="checkbox"] {
+    inline-size: 1.2rem;
+    block-size: 1.2rem;
+}
+
+.sign-in_actions .check span {
+    align-self: flex-start;
+    margin-block-start: 5px;
+}
+
+.sign-in_actions p {
+    color: #000;
+    margin-inline-end: 2.2rem;
+    font-size: 1.1rem;
+}
+
+.sign-in .form_option {
+    border-start-start-radius: 0;
+}
+
+.sign-in input:hover[type="submit"] {
+    background: rgb(255, 255, 255);
+    color: var(--color-btn);
+    border: 1px solid var(--color-btn);
 }
