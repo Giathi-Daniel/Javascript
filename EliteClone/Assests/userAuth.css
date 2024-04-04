@@ -29,7 +29,7 @@ form {
     /* font-size: clamp(1.2rem, 10px, 0.8rem); */
     text-align: center;
     justify-content: center;
-    margin: 0 20rem 30rem;
+    margin: 0 20rem 32rem;
 }
 
 .form_container {
@@ -201,48 +201,3 @@ input:focus {
 
 
 /* ============================== RESPONSIVE ============================== */
-@media screen and (max-width: 1600px) {
-    .container {
-        inline-size: 150%;
-        margin-inline-start: -10rem;
-        max-inline-size: 100vw;
-    }
-
-    .form_container {
-        grid-template-columns: 1fr;
-    }
-
-    footer {
-        inset-block-end: -5rem;
-        max-inline-size: 100%;
-        /* max-block-size: 100vh; */
-    }
-
-}
-
-@media screen and (max-width: 1200px) {
-    .container {
-        inline-size: 220%;
-        margin-inline-start: -15rem;
-        max-inline-size: 100vw;
-    }
-
-    footer .container {
-        inline-size: 100%;
-        margin-inline-start: -3rem;
-        max-inline-size: 100vw;
-    }
-
-}
-
-@media screen and (max-width: 766px) {
-    .container {
-        inline-size: 1850%;
-        margin-inline-start: -19rem;
-        max-block-size: 200%;
-    }
-
-    footer {
-        inset-block-end: -30rem;
-    }
-}
