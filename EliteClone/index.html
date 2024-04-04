@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg" href="/logo.svg" />
     <title>Advanced Writers</title>
-    <!-- *** BOOTSTRAP ICONS -->
+    <!-- *** FONTAWESOME ICONS -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
     <!-- CSS LINK -->
     <link rel="stylesheet" href="Assests/styles.css" />
@@ -17,7 +17,24 @@
   <body>
     <!-- ========================== NAVIGATION ============================= -->
     <nav>
-      <div class="container"></div>
+      <div class="container nav_container">
+        <a href="#" class="logo">
+          <img src="logo.svg" alt="" />
+          <span>Advanced Writers</span>
+        </a>
+        <ul class="nav_links">
+          <li><a href="#orders">Orders</a></li>
+          <li><a href="#assigned">Assigned</a></li>
+          <li><a href="#account" class="account_btn">Account</a></li>
+        </ul>
+        <div class="nav_btns">
+          <a href="#notification" class="notifications">
+            <i class="fa-regular fa-bell"></i>
+            <span>0</span>
+          </a>
+          <a class="btn_auth">Logout</a>
+        </div>
+      </div>
     </nav>
     <!-- ========================== NAVIGATION END============================= -->
 

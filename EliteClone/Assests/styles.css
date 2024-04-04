@@ -33,17 +33,108 @@ body {
     background: var(--color-white);
     margin: 0;
     padding-block-end: 100px;
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
 }
 
 .container {
-    inline-size: var(--container-width-lg);
     margin: 0 auto;
+    inline-size: 55%;
 }
-
-
 
 /* ********************* GENERAL STYLING END ********************** */
 
+/* ********************* NAVBAR ********************** */
+.nav_container {
+    margin-block-start: 3rem;
+    border-radius: 7rem;
+    background: var(--color-primary);
+    display: grid;
+    grid-template-columns: 30% 60% auto;
+    padding-inline: 3rem;
+    padding-block: 1.5rem;
+    place-items: center;
+    font-weight: bold;
+}
+
+.logo {
+    display: flex;
+    line-height: 2rem;
+    color: #fff;
+}
+
+.nav_links {
+    display: flex;
+    gap: 5rem;
+    text-transform: capitalize;
+}
+
+ul li a {
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.account_btn {
+    padding-inline: 1.5rem;
+    padding-block: 1rem;
+    border-radius: 7rem;
+    background: var(--color-btn);
+    box-sizing: border-box;
+    font-size: 1.3rem;
+    transition: var(--transition);
+}
+
+.account_btn:hover {
+    background: var(--color-white);
+    color: var(--color-primary);
+}
+
+.notifications {
+    display: flex;
+    position: relative;
+}
+
+.notifications i {
+    inline-size: 20px;
+    color: var(--color-white);
+}
+
+.notifications span {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    inset-inline-start: 1rem;
+    inset-block-start: -0.5rem;
+    inline-size: 1.4rem;
+    block-size: 1.4rem;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    background: var(--color-btn);
+    color: white;
+    padding-block-start: 2.5px;
+}
+
+.nav_btns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-inline-start: -5rem;
+}
+
+.nav_btns .btn_auth {
+    padding-inline: .5rem;
+    padding-block-end: .5rem;
+    border-radius: .3rem 1rem .3rem 1rem;
+    font-size: 1.3rem;
+    color: #fff;
+    background: var(--color-primary);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.nav_btns .btn_auth:hover {
+    background: var(--color-white);
+    color: var(--color-primary);
+}
 
 /* ********************* FOOTER ********************** */
 
