@@ -59,7 +59,7 @@ nav {
     display: grid;
     grid-template-columns: 30% 60% auto;
     padding-inline: 3rem;
-    padding-block: 1.5rem;
+    padding-block: 1rem;
     place-items: center;
     font-weight: bold;
 }
@@ -79,6 +79,7 @@ nav {
 }
 
 .nav_links {
+    margin-block-start: -2rem;
     display: flex;
     gap: 5rem;
     text-transform: capitalize;
@@ -137,6 +138,7 @@ ul li a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-inline-start: -5rem;
+    margin-block-start: -1rem;
 }
 
 .nav_btns .btn_auth {
