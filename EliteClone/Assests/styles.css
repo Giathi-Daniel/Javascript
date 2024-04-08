@@ -305,7 +305,52 @@ footer .credit {
 
 /* ********************* MEDIA QUERIES ********************** */
 /* ================ TABLETS =============== */
-@media screen and (max-width: 1024px) {}
+@media screen and (max-width: 1024px) {
+    .container {
+        inline-size: 100%;
+    }
+
+    .nav_container {
+        margin-inline-start: -28rem;
+        inline-size: 87%;
+    }
+
+    .home {
+        inline-size: 90%;
+        margin-inline-start: 10rem;
+    }
+
+    .home h1 {
+        font-size: 2.7rem;
+        inline-size: 100%;
+    }
+
+    .home_text {
+        max-inline-size: 80vw;
+        font-size: 1.2rem;
+        margin-inline-start: -7rem;
+    }
+
+    .display {
+        inline-size: 90%;
+    }
+
+    .display .msg {
+        font-size: 17px;
+    }
+
+    footer {
+        margin-block-start: 3rem;
+    }
+
+    footer .footer_container {
+        margin-inline-start: 4rem;
+    }
+
+    footer .credit {
+        margin-inline-start: 4rem;
+    }
+}
 
 /* ================ MEDIUM SCREENS =============== */
 @media screen and (max-width: 764px) {}
