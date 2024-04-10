@@ -492,8 +492,6 @@ footer {
 .useful_links {
     display: flex;
     flex-direction: column;
-    position: relative;
-    transition: var(--transition);
 }
 
 .logo span,
@@ -507,11 +505,6 @@ footer {
     font-size: 14px;
     margin-block-end: 0.8rem;
     font-weight: 400;
-}
-
-.useful_links a:hover {
-    position: absolute;
-    inset-inline-start: 10px;
 }
 
 .social_links {
