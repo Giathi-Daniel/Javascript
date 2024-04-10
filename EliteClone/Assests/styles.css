@@ -344,8 +344,108 @@ hr {
 }
 
 
+/* ********************* ACCOUNT ********************** */
+.account_header {
+    margin-block-start: 12rem;
+    margin-block-end: 3rem;
+    display: flex;
+    justify-content: space-between;
+    background: rgb(238, 221, 223);
+    padding-block: 1.5rem;
+    padding-inline: 2rem;
+    border-radius: .7rem;
+}
+
+.account_header a {
+    font-weight: 400;
+    font-size: 1.8rem;
+    color: var(--color-light);
+}
+
+.account_header a.active,
+.account_header a:hover {
+    color: var(--color-btn);
+}
+
+/* ********************* ACCOUNT_SUMMARY ********************** */
+.summary {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.right .acc_info {
+    display: flex;
+    background: #fff;
+    border: 0.05rem solid var(--color-btn);
+    border-radius: 0.7rem 0.2rem 0.7rem 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block-end: 1rem;
+    block-size: 25vh;
+}
+
+.status {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.pending,
+.completed,
+.payment,
+.earnings {
+    background: #fff;
+    border: 0.05rem solid var(--color-btn);
+    border-radius: 0.7rem 0.2rem 0.7rem 0.2rem;
+    font-size: .8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline-start: 1rem;
+    padding-inline-end: .5rem;
+    block-size: 10.3vh;
+}
+
+.image {
+    inline-size: 2rem;
+    block-size: 2rem;
+    background: var(--color-btn);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: .3rem;
+}
+
+.payment .image {
+    background: rgb(89, 241, 216);
+}
+
+.completed .image {
+    background: rgb(164, 236, 198);
+}
+
+.earnings .image {
+    background: rgb(38, 245, 135);
+}
 
 
+.notification {
+    background: #fff;
+    border: 0.05rem solid var(--color-btn);
+    border-radius: 0.7rem 0.2rem 0.7rem 0.2rem;
+    block-size: 50vh;
+    max-block-size: 100vh;
+}
+
+.notification h1 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-inline-start: 2rem;
+    margin-block-start: 1rem;
+}
 
 /* ********************* FOOTER ********************** */
 footer {
