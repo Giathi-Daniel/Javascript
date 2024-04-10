@@ -505,6 +505,11 @@ footer {
     font-size: 14px;
     margin-block-end: 0.8rem;
     font-weight: 400;
+    transition: all 300ms ease-in;
+}
+
+.useful_links a:hover {
+    margin-inline-start: 1rem;
 }
 
 .social_links {
@@ -525,6 +530,13 @@ footer {
     text-align: center;
     box-sizing: border-box;
     display: flex;
+    font-size: 16px;
+    transition: all 500ms ease;
+    overflow: hidden;
+}
+
+.social_links i:hover {
+    margin-block-start: -.5rem;
 }
 
 footer .credit {
