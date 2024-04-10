@@ -212,6 +212,141 @@ ul li a {
 }
 
 
+/* ********************* ASSIGNED ********************** */
+.order_head {
+    margin-block-start: 12rem;
+    margin-block-end: 3rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.order_head h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.orders_top {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+aside {
+    position: absolute;
+    inset-inline-end: 30rem;
+    margin-block-start: -2.5rem;
+}
+
+aside input[type="search"] {
+    padding-block: .5rem;
+    border: 0.5px solid var(--color-light);
+    outline: 0;
+    padding-inline-start: .5rem;
+    color: var(--color-light);
+    background: transparent;
+    border-radius: .3rem;
+    box-shadow: 0 0.1rem 1rem rgb(208, 204, 204);
+}
+
+.select {
+    padding: .5rem;
+    border-radius: .3rem;
+    background: var(--color-secondary);
+    color: var(--color-white);
+    border: none;
+    outline: none;
+    display: relative;
+    cursor: pointer;
+    line-height: 1.2rem;
+    letter-spacing: 1px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.options {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    margin-block-start: .5rem;
+    background-color: #fff;
+    padding: 1rem 2rem 1rem 1rem;
+    border-radius: .5rem;
+    box-shadow: 0 0.1rem 1rem rgb(208, 204, 204);
+    display: none;
+}
+
+.orders_container {
+    border: 1px solid #afaaaa;
+    border-radius: .3rem;
+    padding-inline: 3rem;
+    padding-block: 3rem;
+    margin-block-start: 3rem;
+}
+
+.orders {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    gap: 2rem;
+    max-inline-size: 100vw;
+}
+
+.task {
+    padding: 3rem 2rem 3rem 3rem;
+    background: #f6f2f2;
+    border-radius: .5rem;
+    max-block-size: 100vh;
+    inline-size: 100%;
+    overflow-y: hidden;
+    font-size: .9rem;
+}
+
+.task_header {
+    display: flex;
+    justify-content: space-between;
+    margin-block-start: -1rem !important;
+    cursor: pointer;
+}
+
+.task_header img {
+    inline-size: 40px;
+    border: 1px solid rgb(8, 145, 178);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    background: rgb(8, 145, 178);
+    color: #fff;
+    border-radius: .3rem;
+}
+
+.task_body {
+    margin-block-start: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    /* row-gap: 2rem; */
+}
+
+.task_id,
+.task_type,
+.task_subject,
+.task_price,
+.deadline {
+    display: flex;
+    justify-content: space-between;
+    margin-block: 1rem;
+}
+
+hr {
+    border: 0.3px solid var(--color-light);
+    inline-size: 100%;
+    outline: none;
+}
+
+
+
+
+
 /* ********************* FOOTER ********************** */
 footer {
     background: var(--color-primary);
