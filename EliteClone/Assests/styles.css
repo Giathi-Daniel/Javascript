@@ -369,10 +369,16 @@ hr {
 
 /* ********************* ACCOUNT_SUMMARY ********************** */
 .summary {
+    display: none;
+}
+
+/* .summary {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-}
+} */
+
+
 
 .right .acc_info {
     display: flex;
@@ -446,6 +452,120 @@ hr {
     margin-inline-start: 2rem;
     margin-block-start: 1rem;
 }
+
+/* ********************* ACCOUNT_INFO ********************** */
+.account,
+table {
+    display: none;
+}
+
+/* .account {
+    padding-block-start: 1rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    inline-size: 100%;
+    color: var(--color-light);
+} */
+
+.right>h1 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #000;
+}
+
+.right p {
+    font-size: .7rem;
+}
+
+.left {
+    background: #4c1d95;
+    color: var(--color-white);
+    padding-inline: 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .7rem .3rem;
+    font-size: 1rem;
+    inline-size: 140px;
+    block-size: 40px;
+}
+
+table {
+    inline-size: 100%;
+    font-size: .9rem;
+    color: var(--color-light);
+    padding-block-start: 2rem;
+}
+
+th,
+td {
+    padding-block: 14px;
+    text-align: start;
+    padding-inline-start: 1rem;
+}
+
+tr:nth-child(odd) {
+    background: rgb(238, 221, 223);
+
+}
+
+th {
+    font-size: .8rem;
+    font-weight: 500;
+    color: #000;
+}
+
+
+/* ********************* RESET PASSWORD ********************** */
+
+.password_container {
+    padding-inline: 2rem;
+    padding-block: 2.5rem;
+    border: 1px solid rgb(243, 184, 191);
+    inline-size: 100%;
+    background: rgb(255, 247, 247);
+}
+
+.password_container label {
+    display: block;
+    max-inline-size: 100vw;
+    font-size: .9rem;
+    color: rgb(17 24 39);
+}
+
+.password_container input[type="password"] {
+    /* background: red; */
+    border-radius: .3rem;
+    border: .1px solid var(--color-light);
+    max-inline-size: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: .5rem;
+    outline: none;
+    /* border: none; */
+    box-sizing: border-box;
+    margin-block-start: .5rem;
+}
+
+.reset {
+    inline-size: 100%;
+    background: red;
+    max-inline-size: 200rem;
+    border: none;
+    outline: none;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-block: .5rem;
+    margin-block-start: 1rem;
+    border-radius: .3rem .7rem;
+}
+
+
 
 /* ********************* FOOTER ********************** */
 footer {
