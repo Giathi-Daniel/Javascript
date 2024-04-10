@@ -46,8 +46,8 @@ body {
 /* ********************* NAVBAR ********************** */
 nav {
     position: fixed;
-    top: 0;
-    left: 30rem;
+    inset-block-start: 0;
+    inset-inline-start: 27rem;
     inline-size: 100%;
     z-index: 999;
 }
