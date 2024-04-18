@@ -196,7 +196,7 @@ ul li a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 3rem 10rem 2rem 10rem;
+    padding: 3rem 10rem 2rem;
 }
 
 .display svg {
@@ -680,6 +680,34 @@ footer .credit {
 
 
 /* ********************* MEDIA QUERIES ********************** */
+/* ================ LARGE SCREEN =============== */
+@media screen and (max-width: 1300px) {
+    .container {
+        inline-size: 96%;
+    }
+
+    .nav_container {
+        margin-inline-start: -30rem;
+        inline-size: 90%;
+    }
+
+    .display {
+        inline-size: 86%;
+    }
+
+    .right {
+        margin-inline-end: -33.5rem;
+    }
+
+    .footer_container {
+        inline-size: 86%;
+    }
+
+    footer .credit {
+        margin-inline-start: 5rem;
+    }
+}
+
 /* ================ TABLETS =============== */
 @media screen and (max-width: 1024px) {
     /* body {
@@ -692,7 +720,7 @@ footer .credit {
 
     .nav_container {
         position: absolute;
-        inset-inline-start: -32rem;
+        inset-inline-start: -3rem;
         inline-size: 100%;
     }
 
@@ -759,10 +787,6 @@ footer .credit {
         inline-size: 100%;
     }
 
-    .right {
-        margin-inline-end: -33.5rem;
-    }
-
     .home h1 {
         font-size: 1.4rem;
     }
@@ -792,8 +816,8 @@ footer .credit {
     }
 
     .nav_container {
-        inset-inline-start: -35.1rem;
-        inline-size: 95%;
+        inset-inline-start: -5rem;
+        inline-size: 96%;
     }
 
     .logo {
@@ -812,27 +836,50 @@ footer .credit {
     }
 
     .nav_links {
-        /* position: absolute;
-        inset-inline-end: 0;
+        position: absolute;
+        background: var(--color-primary);
         display: flex;
-        inset-block-end: 40rem;
         flex-direction: column;
+        margin-block-start: -3rem;
+        block-size: 100vh;
         justify-content: center;
         align-items: center;
-        background: var(--color-primary);
-        block-size: 100vh;
-        color: var(--color-white);
-        inline-size: 101%;
-        z-index: 99999999999; */
-        display: none;
+        inline-size: 50%;
+        inset-block-start: 0;
+        inset-inline-end: 0;
+        font-size: 2rem;
+        padding: 10rem 0 10rem 2rem;
+        z-index: 9999999999999;
+    }
+
+    ul li a {
+        font-size: 2rem;
     }
 
     .notifications {
-        margin-inline-start: 5rem;
+        margin-inline-start: 2rem;
     }
 
     .notifications i {
         font-size: 2rem;
+    }
+
+    .home {
+        inline-size: 80%;
+    }
+
+    .home>h1 {
+        font-size: 1rem;
+        margin-inline-start: -2rem;
+    }
+
+    .home_text {
+        font-size: 12px;
+        margin-inline-end: 1rem;
+    }
+
+    .display {
+        inline-size: 70%;
     }
 
     .notifications span {
@@ -843,19 +890,30 @@ footer .credit {
     }
 
     .account_btn {
-        display: none;
+        position: absolute;
+        right: 0;
+        z-index: 999999999999999999;
+        top: 20rem;
+        font-size: 2rem;
+        margin-right: 1rem;
     }
 
     .menu_btn {
         display: inline-block;
         position: absolute;
-        margin-inline-start: 13rem;
-        font-size: 2rem;
+        margin-inline-start: 10rem;
+        font-size: 2.6rem;
         color: var(--color-white);
+        z-index: 999999999999;
     }
 
     .menu_btn .fa-close {
         display: none;
+    }
+
+    .right {
+        inline-size: 100%;
+        margin-inline-end: -14rem;
     }
 
     .nav_btns {
@@ -866,20 +924,58 @@ footer .credit {
         display: none;
     }
 
+    .home {
+        text-align: center;
+        margin-block-start: 10rem;
+    }
+
+    .display {
+        inline-size: 100%;
+    }
+
+    .display>p {
+        inline-size: 200px;
+        text-align: center;
+    }
+
+    .display .msg {
+        max-inline-size: 200px;
+        text-align: center;
+    }
+
     aside {
         inset-inline-end: .1rem;
     }
 
     .order_head {
         inline-size: 100%;
-        margin-inline-start: 5rem;
+        text-align: center;
+
+    }
+
+    .order_head>h1 {
+        margin-inline-start: -3rem;
+    }
+
+    .order_head p {
+        max-inline-size: 320px;
+    }
+
+    .right {
+        max-inline-size: 40vw;
+        margin-inline-end: 2rem;
     }
 
     .orders_container {
-        margin-inline-start: 2rem;
-        inline-size: 25rem;
+        margin-inline-start: 0;
+        inline-size: 80%;
         padding: 1rem;
     }
+
+    .orders {
+        inline-size: 100%;
+    }
+
 
     footer {
         inline-size: 103%;
