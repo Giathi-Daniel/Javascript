@@ -12,3 +12,19 @@ window.addEventListener('click', (event) => { element
         filter.style.display = 'none';
     }
 });
+
+const menu = document.querySelector("#openMenu")
+const display = document.querySelector(".nav_links", ".account_btn")
+const close = document.querySelector("#closeMenu")
+
+menu.addEventListener('click', ()=> {
+    display.classList.toggle("active")
+    menu.style.display = "none"
+    close.style.display = "block"
+})
+
+close.addEventListener('click', ()=> {
+    display.classList.remove("active")
+    menu.style.display = "inline-block"
+    close.style.display = "none"
+})

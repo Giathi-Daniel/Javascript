@@ -134,6 +134,17 @@ ul li a {
     box-sizing: border-box;
 }
 
+i {
+    font-size: 2rem;
+    color: var(--color-white);
+    cursor: pointer;
+    display: none;
+}
+
+i#closeMenu {
+    display: none;
+}
+
 .nav_btns {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -676,9 +687,9 @@ footer .credit {
 /* ********************* MEDIA QUERIES ********************** */
 /* ================ TABLETS =============== */
 @media screen and (max-width: 1024px) {
-    body {
+    /* body {
         background: red;
-    }
+    } */
 
     .container {
         inline-size: 86%;
@@ -749,6 +760,10 @@ footer .credit {
         margin-block-start: .5rem;
     }
 
+    .menu_btn {
+        display: none;
+    }
+
     main {
         margin-inline-start: -2rem;
         inline-size: 77%;
@@ -793,7 +808,7 @@ footer .credit {
     }
 
     .logo img {
-        margin-inline-start: 5rem;
+        margin-inline-start: 10rem;
         inline-size: 2.7rem;
     }
 
@@ -803,11 +818,10 @@ footer .credit {
     }
 
     .nav_links {
-        display: none;
         /* position: absolute;
         inset-inline-end: 0;
         display: flex;
-        inset-block-end: -40rem;
+        inset-block-end: 40rem;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -816,10 +830,32 @@ footer .credit {
         color: var(--color-white);
         inline-size: 101%;
         z-index: 99999999999; */
+        display: none;
+    }
+
+    .notifications {
+        margin-inline-start: 5rem;
+    }
+
+    .notifications i {
+        font-size: 2rem;
+    }
+
+    .notifications span {
+        inline-size: 1.5rem;
+        block-size: 1.5rem;
+        font-size: 1rem;
+        inset-inline-start: .9rem;
     }
 
     .account_btn {
         display: none;
+    }
+
+    .menu_btn {
+        display: inline-block;
+        position: absolute;
+        margin-inline-start: 13rem;
     }
 
     .nav_btns {
@@ -834,10 +870,20 @@ footer .credit {
         inset-inline-end: .1rem;
     }
 
+    .order_head {
+        inline-size: 100%;
+        margin-inline-start: 5rem;
+    }
+
     .orders_container {
-        margin-inline-start: 3rem;
+        margin-inline-start: 2rem;
         inline-size: 25rem;
         padding: 1rem;
+    }
+
+    footer {
+        inline-size: 103%;
+        overflow: hidden;
     }
 
 
