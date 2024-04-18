@@ -24,12 +24,15 @@
     list-style: none;
 }
 
+.notifications i {
+    color: var(--color-white);
+}
+
 /* **************************SING UP************************** */
 form {
-    /* font-size: clamp(1.2rem, 10px, 0.8rem); */
     text-align: center;
     justify-content: center;
-    margin: 0 20rem 32rem;
+    margin: 15rem auto -9rem;
 }
 
 .form_container {
@@ -46,6 +49,7 @@ form {
     background: var(--color-secondary);
     padding: 10rem 1rem;
     border-start-start-radius: inherit;
+    line-height: 3rem;
 }
 
 .form_option h1 {
@@ -57,6 +61,7 @@ form {
     font-size: max(1rem, 80%);
     text-align: center;
     padding-block: 1rem;
+    color: var(--color-white);
 }
 
 .form_option input[type="submit"] {
@@ -198,6 +203,9 @@ input:focus {
     color: var(--color-btn);
     border: 1px solid var(--color-btn);
 }
+
+
+/* ============================== FOOTER ============================== */
 
 
 /* ============================== RESPONSIVE ============================== */
