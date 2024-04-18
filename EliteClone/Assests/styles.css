@@ -90,8 +90,7 @@ ul li a {
 }
 
 .account_btn {
-    padding-inline: 1.5rem;
-    padding-block: 0.9rem;
+    padding: 0.9rem 1.5rem;
     border-radius: 7rem;
     background: var(--color-btn);
     box-sizing: border-box;
@@ -99,7 +98,6 @@ ul li a {
     text-transform: uppercase;
     transition: var(--transition);
     margin-inline-end: 5rem;
-    text-align: top;
     color: var(--color-white);
 }
 
@@ -134,7 +132,6 @@ ul li a {
     color: white;
     padding-block-start: 2.5px;
     box-sizing: border-box;
-    align-self: end;
 }
 
 .nav_btns {
@@ -215,6 +212,7 @@ ul li a {
     font-size: 12px;
     color: rgb(26, 25, 25);
     font-weight: 300;
+    text-align: center;
 }
 
 
@@ -681,43 +679,169 @@ footer .credit {
 @media screen and (max-width: 1024px) {
     body {
         background: red;
-        overflow: hidden;
     }
 
     .container {
-        inline-size: 80%;
+        inline-size: 86%;
     }
 
-    nav {
+    .nav {
         inset-inline-start: 0;
     }
 
+    .nav_container {
+        position: absolute;
+        inset-inline-start: -34rem;
+        inline-size: 76%;
+    }
+
+    .logo {
+        line-height: normal;
+        margin-block-start: 1rem;
+    }
+
     .logo img {
-        inline-size: 3rem;
+        margin-inline-start: 0;
+        inline-size: 2rem;
+    }
+
+    .logo span {
+        font-size: .9rem;
+        margin-inline-start: -1rem;
+    }
+
+    .nav_links {
+        gap: 2rem;
+    }
+
+    ul li a {
+        font-size: .8rem;
+    }
+
+    .account_btn {
+        padding: 0.35rem .85rem;
+        margin-inline-start: -1rem;
+        font-size: .8rem;
+        margin-block-start: .5rem;
+    }
+
+    .nav_btns {
+        margin-inline-start: -8rem;
+        place-items: center;
+        margin-block-start: 0;
+    }
+
+    .notifications i {
+        inline-size: 20px;
+        font-size: 1.5rem;
+    }
+
+    .notifications span {
+        inline-size: 1.2rem;
+        block-size: 1.2rem;
+        font-size: 1rem;
+        inset-inline-start: .6rem;
+        inset-block-start: -6px;
+    }
+
+    .nav_btns .btn_auth {
+        font-size: 1.2rem;
+        margin-inline-start: -1rem;
+        margin-block-start: .5rem;
+    }
+
+    main {
+        margin-inline-start: -2rem;
+        inline-size: 77%;
+    }
+
+    .home h1 {
+        font-size: 1.4rem;
+    }
+
+    .home_text {
+        font-size: 12px;
+    }
+
+    footer {
+        inline-size: 100%;
+    }
+
+    .footer_container {
+        grid-template-columns: 1fr 1fr;
+        margin-inline-start: 3rem;
+    }
+
+    footer .credit {
+        margin-inline-start: 3rem;
+    }
+}
+
+/* ================ SMALL SCREENS =============== */
+@media screen and (max-width: 764px) {
+    .container {
+        inline-size: 96%;
+    }
+
+    .nav_container {
+        inset-inline-start: -35.1rem;
+        inline-size: 75%;
+    }
+
+    .logo {
+        margin-block-start: 0;
+    }
+
+    .logo img {
+        margin-inline-start: 5rem;
+        inline-size: 2.7rem;
+    }
+
+    .logo span {
+        font-size: 1rem;
+        margin-inline-start: -1rem;
+    }
+
+    .nav_links {
+        /* display: none; */
+        position: absolute;
+        right: 0;
+        display: flex;
+        bottom: -40rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #4c1d95;
+        block-size: 100vh;
+        color: var(--color-white);
+    }
+
+    .account_btn {
+        display: none;
+    }
+
+    .nav_btns {
+        margin-inline-start: 10rem;
+    }
+
+    .nav_btns .btn_auth {
+        display: none;
+    }
+
+    .footer_container {
+        grid-template-columns: 1fr;
         margin-inline-start: 1rem;
     }
 
-
-    .nav_container {
-        margin-block-start: 1rem;
-        margin-inline-start: 5rem;
-        inline-size: 100%;
-        padding: 0.5rem 0 0 0;
-
+    .company a img {
+        margin-inline-start: -1rem;
+        inline-size: 70%;
     }
 
-    aside {
-        inset-inline-end: 6rem;
+    footer .credit {
+        font-size: 1rem;
+        text-align: center;
+        margin-inline-start: 1rem;
+        max-inline-size: 250px;
     }
-
 }
-
-/* ================ MEDIUM SCREENS =============== */
-@media screen and (max-width: 764px) {}
-
-
-/* ================ SMALLER SCREENS =============== */
-@media screen and (max-width: 600px) {}
-
-/* ================ SMALLEST SCREENS ============ */
-@media screen and (max-width: 400px) {}
