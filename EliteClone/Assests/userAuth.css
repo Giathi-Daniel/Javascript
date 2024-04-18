@@ -209,11 +209,25 @@ input:focus {
 
 
 /* ============================== RESPONSIVE ============================== */
-@media screen and (max-width: 1240px) {
-    .nav_container {
-        inset-inline-start: -35rem;
-        inline-size: 91%;
+@media screen and (max-width: 1300px) {
+    .container {
+        inline-size: 96%;
     }
+
+    .nav_container {
+        inline-size: 90%;
+        margin-inline-start: -33rem;
+    }
+
+    .form_container {
+        inline-size: 80%;
+        margin-inline-end: 8rem;
+    }
+
+    footer .credit {
+        margin-inline-start: 2rem;
+    }
+
 }
 
 @media screen and (max-width: 790px) {
@@ -234,5 +248,9 @@ input:focus {
 
     .form_main {
         border-radius: 0;
+    }
+
+    .form_container {
+        margin-block-end: 0;
     }
 }
