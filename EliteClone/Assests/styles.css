@@ -283,8 +283,7 @@ aside input[type="search"] {
 .orders_container {
     border: 1px solid #afaaaa;
     border-radius: .3rem;
-    padding-inline: 3rem;
-    padding-block: 3rem;
+    padding: 3rem;
     margin-block-start: 3rem;
 }
 
@@ -780,16 +779,17 @@ footer .credit {
 /* ================ SMALL SCREENS =============== */
 @media screen and (max-width: 764px) {
     .container {
-        inline-size: 96%;
+        inline-size: 100%;
     }
 
     .nav_container {
         inset-inline-start: -35.1rem;
-        inline-size: 75%;
+        inline-size: 95%;
     }
 
     .logo {
         margin-block-start: 0;
+        margin-inline-start: -5rem;
     }
 
     .logo img {
@@ -803,17 +803,19 @@ footer .credit {
     }
 
     .nav_links {
-        /* display: none; */
-        position: absolute;
-        right: 0;
+        display: none;
+        /* position: absolute;
+        inset-inline-end: 0;
         display: flex;
-        bottom: -40rem;
+        inset-block-end: -40rem;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        background: #4c1d95;
+        background: var(--color-primary);
         block-size: 100vh;
         color: var(--color-white);
+        inline-size: 101%;
+        z-index: 99999999999; */
     }
 
     .account_btn {
@@ -827,6 +829,17 @@ footer .credit {
     .nav_btns .btn_auth {
         display: none;
     }
+
+    aside {
+        inset-inline-end: .1rem;
+    }
+
+    .orders_container {
+        margin-inline-start: 3rem;
+        inline-size: 25rem;
+        padding: 1rem;
+    }
+
 
     .footer_container {
         grid-template-columns: 1fr;
@@ -842,6 +855,6 @@ footer .credit {
         font-size: 1rem;
         text-align: center;
         margin-inline-start: 1rem;
-        max-inline-size: 250px;
+        /* max-inline-size: 250px; */
     }
 }
