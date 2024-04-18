@@ -45,60 +45,62 @@
 
     <!-- ========================== FORM ============================= -->
     <form action="https://formspree.io/f/xeqyrnvb" method="POST">
-      <div class="sign-up">
-        <div class="container form_container">
-          <div class="form_option">
-            <h1>Welcome Back!</h1>
-            <p>
-              To keep connected with us please login with your personal info
-            </p>
-            <input type="submit" value="Sign In" />
-          </div>
-          <div class="form_main">
-            <h2>Sign up</h2>
-            <div class="form_input">
-              <label for="Name">Name</label>
-              <input type="text" name="Name" id="Name" required />
-              <label for="email">Email</label>
-              <input type="email" name="email" id="email" required />
+      <div class="container_form">
+        <div class="sign-up">
+          <div class="container form_container">
+            <div class="form_option">
+              <h1>Welcome Back!</h1>
+              <p>
+                To keep connected with us please login with your personal info
+              </p>
+              <input type="submit" value="Sign In" />
             </div>
-            <div class="form_input">
-              <label for="phone">Phone</label>
-              <input type="tel" id="phone" placeholder="+254" required />
-              <label for="ID">National ID</label>
-              <input type="text" id="ID" required />
+            <div class="form_main">
+              <h2>Sign up</h2>
+              <div class="form_input">
+                <label for="Name">Name</label>
+                <input type="text" name="Name" id="Name" required />
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required />
+              </div>
+              <div class="form_input">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="+254" required />
+                <label for="ID">National ID</label>
+                <input type="text" id="ID" required />
+              </div>
+              <label for="password">Password</label>
+              <input type="password" name="PWD" id="password" required />
+              <label for="confirm">Confirm Password</label>
+              <input type="password" name="PWD" id="confirm" required />
+              <input type="submit" value="Register" />
             </div>
-            <label for="password">Password</label>
-            <input type="password" name="PWD" id="password" required />
-            <label for="confirm">Confirm Password</label>
-            <input type="password" name="PWD" id="confirm" required />
-            <input type="submit" value="Register" />
           </div>
         </div>
-      </div>
 
-      <!-- **************** SIGN IN **************** -->
-      <div class="sign-in">
-        <div class="container form_container">
-          <div class="form_main">
-            <h2>Sign in</h2>
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" required />
-            <label for="password">Password</label>
-            <input type="password" name="PWD" id="password" required />
-            <div class="sign-in_actions">
-              <div class="check">
-                <input type="checkbox" />
-                <span>Remember me</span>
+        <!-- **************** SIGN IN **************** -->
+        <div class="sign-in">
+          <div class="container form_container">
+            <div class="form_main">
+              <h2>Sign in</h2>
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" required />
+              <label for="password">Password</label>
+              <input type="password" name="PWD" id="password" required />
+              <div class="sign-in_actions">
+                <div class="check">
+                  <input type="checkbox" />
+                  <span>Remember me</span>
+                </div>
+                <p>Forgot password?</p>
               </div>
-              <p>Forgot password?</p>
+              <input type="submit" value="Sign in" />
             </div>
-            <input type="submit" value="Sign in" />
-          </div>
-          <div class="form_option">
-            <h1>Hello!</h1>
-            <p>Enter your personal details and start journey with us</p>
-            <input type="submit" value="Sign Up" />
+            <div class="form_option">
+              <h1>Hello!</h1>
+              <p>Enter your personal details and start journey with us</p>
+              <input type="submit" value="Sign Up" />
+            </div>
           </div>
         </div>
       </div>

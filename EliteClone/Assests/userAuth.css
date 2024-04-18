@@ -209,3 +209,30 @@ input:focus {
 
 
 /* ============================== RESPONSIVE ============================== */
+@media screen and (max-width: 1240px) {
+    .nav_container {
+        inset-inline-start: -35rem;
+        inline-size: 91%;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    .container {
+        inline-size: 100%;
+    }
+
+    .nav_container {
+        inset-inline-start: -35rem;
+        inline-size: 91%;
+    }
+
+    .form_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        inline-size: 96%;
+    }
+
+    .form_main {
+        border-radius: 0;
+    }
+}
