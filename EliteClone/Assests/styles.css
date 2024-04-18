@@ -134,14 +134,7 @@ ul li a {
     box-sizing: border-box;
 }
 
-i {
-    font-size: 2rem;
-    color: var(--color-white);
-    cursor: pointer;
-    display: none;
-}
-
-i#closeMenu {
+.menu_btn {
     display: none;
 }
 
@@ -283,12 +276,14 @@ aside input[type="search"] {
     display: flex;
     flex-direction: column;
     font-size: 1rem;
-    margin-block-start: .5rem;
+    margin-block-start: 19rem;
+    margin-inline-start: 5rem;
     background-color: #fff;
     padding: 1rem 2rem 1rem 1rem;
     border-radius: .5rem;
     box-shadow: 0 0.1rem 1rem rgb(208, 204, 204);
     display: none;
+    color: #000;
 }
 
 .orders_container {
@@ -692,17 +687,13 @@ footer .credit {
     } */
 
     .container {
-        inline-size: 86%;
-    }
-
-    .nav {
-        inset-inline-start: 0;
+        inline-size: 90%;
     }
 
     .nav_container {
         position: absolute;
-        inset-inline-start: -34rem;
-        inline-size: 76%;
+        inset-inline-start: -32rem;
+        inline-size: 100%;
     }
 
     .logo {
@@ -765,8 +756,11 @@ footer .credit {
     }
 
     main {
-        margin-inline-start: -2rem;
-        inline-size: 77%;
+        inline-size: 100%;
+    }
+
+    .right {
+        margin-inline-end: -33.5rem;
     }
 
     .home h1 {
@@ -856,6 +850,12 @@ footer .credit {
         display: inline-block;
         position: absolute;
         margin-inline-start: 13rem;
+        font-size: 2rem;
+        color: var(--color-white);
+    }
+
+    .menu_btn .fa-close {
+        display: none;
     }
 
     .nav_btns {
