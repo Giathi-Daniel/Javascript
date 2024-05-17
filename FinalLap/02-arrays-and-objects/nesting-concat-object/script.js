@@ -26,3 +26,20 @@ x = Array.isArray(cars) //checks an array
 x = Array.from('12345')
 
 console.log(x)
+
+//1. create an array and mutate it in descending order
+const Arr = [1,2,3,4,5];
+Arr.unshift(0) //add to the 1st index
+Arr.push(6) // add the el to the last index
+console.log(Arr.reverse())
+
+//2. concat 2 arrays and remove the recurring value
+const arr1 = [1,2,3,4,5];
+const arr2 = [5,6,7,8,9,10]
+
+// arr1.concat(arr2).splice(arr1.length -1)
+arr1.pop(4)
+// console.log(arr1)
+let arr3 = [...arr1, ...arr2]
+
+console.log(arr3)
