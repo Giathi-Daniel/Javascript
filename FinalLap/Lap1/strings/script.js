@@ -26,3 +26,13 @@ x = s.split(" ") //returns an array
 x = s.split("") //returns an array
 
 console.log(x)
+
+
+// Make the first the sentece to Uppercase
+const myString = 'developer'
+
+let myNewString; 
+
+myNewString = myString[0].toUpperCase() + myString.substring(1); 
+
+alert(myNewString)
