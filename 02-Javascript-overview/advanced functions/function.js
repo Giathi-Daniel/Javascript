@@ -37,3 +37,13 @@ console.log('next test') // displayed first then timeout follows  (same as set i
 setInterval(function() {
     console.log('set interval') 
 }, 3000);
+
+
+// Another way to loop an array - for each
+[ 
+    'read books',
+    'go work out',
+    'take a shower'
+].forEach(function(value) {
+    console.log(value)
+})
