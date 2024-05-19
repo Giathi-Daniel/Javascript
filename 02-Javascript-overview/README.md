@@ -14,6 +14,7 @@
 
 
 # Arrays and loops
+ - NB: arrays are references
  - .push() -> adds an element/ a value the end of the array
  - .splice() -> removes the value from the array
  - .shift() -> removes a value from the begin of the array
