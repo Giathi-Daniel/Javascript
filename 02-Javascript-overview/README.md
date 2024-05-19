@@ -1,5 +1,6 @@
-# This is a Javascript overview with some quizes
+# This is a Javascript overview
 
+dkfk
 # Primitive Data Types (Stored directly in the "stack")
 
  - String -  Sequence of characters. "quotes" or "backticks"
