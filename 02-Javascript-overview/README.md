@@ -11,3 +11,10 @@
 
 # Reference Data Types (stored in the heap and accessed by reference)
  -  Non-primitive types that are stored and accessed i.e object literals, arrays and functions
+
+
+# Arrays and loops
+ - .push() -> adds an element/ a value the end of the array
+ - .splice() -> removes the value from the array
+ - .shift() -> removes a value from the begin of the array
+ - .unshift() -> adds a value at the front of the array
