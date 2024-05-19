@@ -1,28 +1,84 @@
-const todoList = [];
-const addBtn = document.querySelector('#addTodo');
+let todoListSimple = [];
 
+function addTodoSimple() {
+  const inputElement = document.querySelector('.js-todo-name-simple');
+  const name = inputElement.value
 
-addBtn.addEventListener('click', () => {
-    const todoInput = document.querySelector('.js-todo-name-simple');
-    const name = todoInput.value;
+  todoListSimple.push(name);
 
-    todoList.push(name);
-    console.log(todoList);
+  inputElement.value = '';
+  console.log(todoListSimple);
+}
 
-    // refresh when the btn is clicked
-    todoInput.value = ""
+let todoListSimple2 = [];
 
-    // => Challenge (complete the code below to render in HTML doc as well as show when an element is being added to the array)
-    todoList.forEach(list => {
-        const listItem =  `<p>${list}</p>`;
+function addTodoSimple2() {
+  const inputElement = document.querySelector('.js-todo-name-simple-2');
+  const name = inputElement.value
 
-        document.querySelector('.js-todo-list-simple-2').innerHTML = listItem;
+  todoListSimple2.push(name);
+  inputElement.value = '';
 
-        console.log(listItem)
+  renderTodoSimple2();
+}
 
-            // method b
-        // let todoListHTML = ''
-        // todoListHTML += listItem
-        // document.querySelector('.js-todo-list-simple-2').innerHTML = todoListHTML;
-    })
-})
+function renderTodoSimple2() {
+  let todoListHTML = '';
+
+  for (let i = 0; i < todoListSimple2.length; i++) {
+    const todo = todoListSimple2[i];
+    todoListHTML += `
+      <p>${todo}</p>
+    `;
+  }
+
+  document.querySelector('.js-todo-list-simple-2')
+    .innerHTML = todoListHTML;
+}
+
+let todoList = [];
+renderTodoList();
+
+function addTodo() {
+  const todoNameElem = document.querySelector('.js-todo-name');
+  const name = todoNameElem.value;
+
+  const todoDueDateElem = document.querySelector('.js-todo-due-date');
+  const dueDate = todoDueDateElem.value;
+
+  todoList.push({
+    name,
+    dueDate
+  });
+
+  renderTodoList();
+  todoNameElem.value = '';
+  todoDueDateElem.value = '';
+}
+
+function deleteTodo(index) {
+  todoList.splice(index, 1);
+  renderTodoList();
+}
+
+function renderTodoList() {
+  let todoListHTML = '';
+
+  for (let i = 0; i < todoList.length; i++) {
+    // const name = todoList[i].name;
+    // const dueDate = todoList[i].dueDate;
+    const { name, dueDate } = todoList[i];
+
+    todoListHTML += `
+      <div class="todo-row">
+        <div>${name}</div>
+        <div>${dueDate}</div>
+        <button class="delete-todo-button" onclick="deleteTodo(${i})">
+          Delete
+        </button>
+      </div>
+    `;
+  }
+
+  document.querySelector('.js-todo-list').innerHTML = todoListHTML;
+}
