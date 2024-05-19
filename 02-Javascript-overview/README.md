@@ -18,3 +18,4 @@
  - .splice() -> removes the value from the array
  - .shift() -> removes a value from the begin of the array
  - .unshift() -> adds a value at the front of the array
+ 
