@@ -12,6 +12,14 @@ let data = [
 // Fetch the button from the DOM, store it in a variable
 // Use addEventListener() to listen for button clicks
 // Log Jane's score when the button is clicked (via data)
+const jsBtn = document.querySelector('js_button');
+
+jsBtn.addEventListener('click', () => {
+    alert('hi');
+    // const jsInfo = document.querySelector('.js-log-info');
+
+    // jsInfo.innerHTML = `<p>${data.player} ${data.score}</p>`
+})
 
 
 
