@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object literals</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+        let x;
+
+        const person = {
+            name: 'John Doe',
+            age: 20,
+            isAdmin: true,
+            address: {
+                street: '123 Main Street',
+                city: 'San Francisco',
+                state: 'CA',
+            },
+            hobbies: ['music', 'karate'],
+        };
+
+        x = person.name;
+        x =person['age'];
+        x = person.address.street
+        x = person.hobbies[1]
+
+        delete person.age;
+        x= person
+
+        person.greet = function() {
+            console.log(`Good morning ${this.name}`);
+        }
+        person.greet();
+
+        console.log(x);
+    </script>
+</body>
+</html>
