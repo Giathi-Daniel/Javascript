@@ -28,6 +28,9 @@ const products = [
     }
 ]
 
+let productsHTML = '';
+
 products.forEach(product, () => {
-    console.log(product)
+    productsHTML += '<div class="hello"</div>`;
+    document.querySelector
 })
