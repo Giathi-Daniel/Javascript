@@ -25,12 +25,31 @@ const products = [
             count: 56
         },
         priceCents: 799
+    },
+    {
+        image: 'images/products/black-2-slot-toaster',
+        name: '2 Slot Toaster Black',
+        rating: {
+            stars: 5,
+            count: 2197
+        },
+        priceCents: 1899
+    },
+    {
+        image: 'images/products/black-2-slot-toaster',
+        name: '2 Slot Toaster Black',
+        rating: {
+            stars: 5,
+            count: 2197
+        },
+        priceCents: 1899
     }
 ]
 
 let productsHTML = '';
 
 products.forEach(product, () => {
-    productsHTML += '<div class="hello"</div>`;
-    document.querySelector
-})
+    productsHTML += `<div class="${product.name}"</div>`;
+});
+
+document.querySelector('.products-grid').innerHTML = productsHTML;
