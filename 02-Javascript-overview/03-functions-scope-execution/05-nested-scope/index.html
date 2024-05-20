@@ -10,14 +10,20 @@
     <h1>Nested Scope</h1>
     
     <script>
-        function subtract(num1, num2) {
-            return num1 - num2; //exits the program
+        function first() {
+            const x = 100;
 
-            console.log('result') 
+            function second() {
+                const y = 50
+                console.log(y + x)
+            }
+
+            // console.log(y)
+
+            second();
         }
 
-        const result = subtract(15, 10);
-        console.log(result, subtract(200, 100))
+        first();
     </script>
 </body>
 </html>
