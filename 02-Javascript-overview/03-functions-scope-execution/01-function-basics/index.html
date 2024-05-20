@@ -10,6 +10,8 @@
     <h1>Basic Functions</h1>
 
     <script>
+        // function declaration -> starts with a name function (hoisting is done. -> calling before declaration)
+        // const result = subtract(15, 10);
         function subtract(num1, num2) {
             return num1 - num2; //exits the program
 
@@ -18,6 +20,13 @@
 
         const result = subtract(15, 10);
         console.log(result, subtract(200, 100))
+
+        // function expression
+        // console.log(addPlusSign(200))
+        const addPlusSign = function(value) {
+            return '+' + value;
+        };
+        console.log(addPlusSign(200))
     </script>
 </body>
 </html>
