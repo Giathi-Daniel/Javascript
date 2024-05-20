@@ -3,7 +3,7 @@ let intervalID;
 
 function autoPlay() {
     if (!isAutoPlaying) {
-        intervalID = setInterval(function() {
+        intervalID = setInterval(() => {
             playGame();
         }, 1000)
         isAutoPlaying = true;
