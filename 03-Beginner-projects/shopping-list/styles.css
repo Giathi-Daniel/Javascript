@@ -26,7 +26,7 @@ body {
 
 /* container */
 .container {
-    background: #ddd;
+    background: #807c7c81;
     margin: 30px auto;
     border-radius: .7rem;
     border: 1px solid #ccc;
@@ -68,7 +68,7 @@ header h1 {
 }
 
 .btn-clear {
-    margin-block-start: 20px;
+    margin: 20px 0 20px;
     inline-size: 100%;
     font-size: 16px;
     background-color: transparent;
@@ -78,6 +78,7 @@ header h1 {
     padding: 10px 20px;
     cursor: pointer;
     transition: all 300ms ease;
+
 }
 
 .btn-clear:hover {
