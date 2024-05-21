@@ -1,4 +1,5 @@
 # This is a Javascript overview
+ - Javascript is single threaded ad synchronous
 
 # Primitive Data Types (Stored directly in the "stack")
 
