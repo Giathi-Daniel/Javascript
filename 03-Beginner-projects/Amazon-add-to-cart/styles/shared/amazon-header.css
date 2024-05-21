@@ -15,17 +15,17 @@
     block-size: 60px;
 }
 
-.amazon-header .left-section {
+.amazon-header-left-section {
     inline-size: 180px;
 }
 
-@media (max-inline-size: 800px) {
-    .amazon-header .left-section {
+@media (max-width: 800px) {
+    .amazon-header-left-section {
         inline-size: unset;
     }
 }
 
-.amazon-header .header-link {
+.header-link {
     display: inline-block;
     padding: 6px;
     border-radius: 2px;
@@ -34,32 +34,32 @@
     border: 1px solid rgba(0, 0, 0, 0);
 }
 
-.amazon-header .header-link:hover {
+.header-link:hover {
     border: 1px solid white;
 }
 
-.amazon-header .amazon-logo {
+.amazon-logo {
     inline-size: 100px;
     margin-block-start: 5px;
 }
 
-.amazon-header .amazon-mobile-logo {
+.amazon-mobile-logo {
     display: none;
 }
 
 @media (max-inline-size: 575px) {
-    .amazon-header .amazon-logo {
+    .amazon-logo {
         display: none;
     }
 
-    .amazon-header .amazon-mobile-logo {
+    .amazon-mobile-logo {
         display: block;
         block-size: 35px;
         margin-block-start: 5px;
     }
 }
 
-.amazon-header .middle-section {
+.amazon-header-middle-section {
     flex: 1;
     max-inline-size: 850px;
     margin-inline-start: 10px;
@@ -67,7 +67,7 @@
     display: flex;
 }
 
-.amazon-header .search-bar {
+.search-bar {
     flex: 1;
     inline-size: 0;
     font-size: 16px;
@@ -80,7 +80,7 @@
     border-end-end-radius: 0;
 }
 
-.amazon-header .search-button {
+.search-button {
     background-color: rgb(254, 189, 105);
     border: none;
     inline-size: 45px;
@@ -90,122 +90,60 @@
     flex-shrink: 0;
 }
 
-.amazon-header .search-icon {
+.search-icon {
     block-size: 22px;
     margin-inline-start: 2px;
     margin-block-start: 3px;
 }
 
-.amazon-header .right-section {
+.amazon-header-right-section {
     inline-size: 180px;
     flex-shrink: 0;
     display: flex;
     justify-content: end;
 }
 
-.amazon-header .right-section-mobile {
-    display: none;
-}
-
-@media (max-inline-size: 575px) {
-    .amazon-header .right-section {
-        display: none;
-    }
-
-    .amazon-header .right-section-mobile {
-        display: block;
-    }
-}
-
-.amazon-header .hamburger-menu-toggle {
-    display: block;
-    padding: 6px;
-    cursor: pointer;
-}
-
-.amazon-header .hamburger-menu-dropdown {
-    background-color: rgb(19, 25, 33);
-    position: absolute;
-    inset-inline-start: 0;
-    inset-inline-end: 0;
-    inset-block-start: 60px;
-
-    z-index: 100;
-    text-align: center;
-
-    display: none;
-    overflow: hidden;
-
-    /* We will use JavaScript to change this height. */
-    block-size: 0px;
-    transition: height 0.25s;
-}
-
-@media (max-inline-size: 575px) {
-    .amazon-header .hamburger-menu-dropdown {
-        display: block;
-    }
-
-    .amazon-header .hamburger-menu-opened {
-        block-size: 88px;
-    }
-
-    .amazon-header .hamburger-menu-link {
-        color: white;
-        text-decoration: none;
-        display: block;
-        padding: 10px;
-        font-weight: 500;
-    }
-
-    .amazon-header .hamburger-menu-link:hover {
-        background-color: rgb(38, 50, 63);
-    }
-}
-
-.amazon-header .orders-link {
+.orders-link {
     color: white;
 }
 
-.amazon-header .returns-text {
+.returns-text {
     display: block;
     font-size: 13px;
 }
 
-.amazon-header .orders-text {
+.orders-text {
     display: block;
     font-size: 15px;
     font-weight: 700;
 }
 
-.amazon-header .cart-link {
+.cart-link {
     color: white;
     display: flex;
     align-items: center;
     position: relative;
 }
 
-.amazon-header .cart-icon {
+.cart-icon {
     inline-size: 50px;
 }
 
-.amazon-header .cart-text {
+.cart-text {
     margin-block-start: 12px;
     font-size: 15px;
     font-weight: 700;
 }
 
-.amazon-header .cart-quantity {
+.cart-quantity {
     color: rgb(240, 136, 4);
     font-size: 16px;
     font-weight: 700;
+
     position: absolute;
     inset-block-start: 4px;
     inset-inline-start: 22px;
+
     inline-size: 26px;
     text-align: center;
-}
-
-.amazon-header .cart-quantity-mobile {
-    color: rgb(240, 136, 4);
 }
