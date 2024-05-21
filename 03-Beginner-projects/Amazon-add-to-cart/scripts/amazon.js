@@ -21,7 +21,7 @@ products.forEach(product => {
     </div>
 
     <div class="product-price">
-      $${product.priceCents / 100}
+      $${(product.priceCents / 100).toFixed(2)} 
     </div>
 
     <div class="product-quantity-container">
@@ -46,7 +46,7 @@ products.forEach(product => {
       Added
     </div>
 
-    <button class="add-to-cart-button button-primary">
+    <button class="add-to-cart-button button-primary add-to-cart" data-product-id="${product.id}">
       Add to Cart
     </button>
   </div>
@@ -57,3 +57,33 @@ console.log(productsHTML)
 // console.log(products.length)
 
 document.querySelector('.products-grid').innerHTML = productsHTML;
+
+// .toFixed -> converts number to string with a specified number of decimal
+
+// add to cart button
+document.querySelectorAll('.add-to-cart')
+ .forEach((button) => {
+    button.addEventListener('click', () => {
+        // console.log('Added product')
+        const productId = button.dataset.productId
+
+        let matchingItem;
+
+        cart.forEach((item) => {
+            if (productId === item.productId) {
+                matchingItem = item
+            }
+        });
+
+        if(matchingItem) {
+            matchingItem.quantity += 1
+        } 
+
+        cart.push({
+            productId: productId,
+            quantity: 1
+        }); 
+        
+        console.log(cart)
+    })
+ })
