@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    border: none;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 18px;
+    background: #eee;
+    color: #000;
+}
+
+/* Buttons */
+.btn {
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.btn:hover {
+    background-color: #444;
+}
+
+.btn-link {
+    font-size: 16px;
+    background-color: transparent;
+}
+
+.btn-clear {
+    margin-block-start: 20px;
+    inline-size: 100%;
+    font-size: 16px;
+    background-color: transparent;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.btn-clear:hover {
+    background-color: #f1f1f1;
+}
+
+.text-red {
+    color: #ff0000;
+}
+
+/* form & input */
+.form-input {
+    inline-size: 100%;
+    font-size: 18px;
+    margin-block-start: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-input-filter {
+    margin-block-start: 20px;
+    inline-size: 100%;
+    font-size: 18px;
+    margin-block-end: 20px;
+    padding: 10px;
+    border-block-end: 1px solid #ccc;
+    background: transparent;
+}
+
+
+/* items */
+.items {
+    margin-block-start: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.items li {
+    display: flex;
+    justify-content: space-between;
+    inline-size: 45%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 15px;
+    margin: 0 5px 20px;
+    font-weight: 700;
+}
+
+@media (max-width: 500px) {
+    .items li {
+        inline-size: 100%;
+    }
+}
