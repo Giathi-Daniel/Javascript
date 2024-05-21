@@ -130,7 +130,7 @@ form {
 .items li {
     display: flex;
     justify-content: space-between;
-    inline-size: 45%;
+    inline-size: 47.5%;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px 15px;
