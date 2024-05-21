@@ -26,18 +26,17 @@ body {
 
 /* container */
 .container {
-    background: #807c7c81;
+    padding: 20px;
     margin: 30px auto;
+    max-inline-size: 500px;
+    background: #e2a34a;
     border-radius: .7rem;
-    border: 1px solid #ccc;
-    inline-size: 86%;
-    padding-inline: 2rem;
 }
 
 /* header */
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     inline-size: 100%;
     margin-block-start: 20px;
@@ -46,6 +45,10 @@ header {
 header h1 {
     font-weight: 300;
     margin-inline-start: 10px;
+}
+
+.edit-mode {
+    color: #ccc;
 }
 
 /* Buttons */
@@ -78,7 +81,6 @@ header h1 {
     padding: 10px 20px;
     cursor: pointer;
     transition: all 300ms ease;
-
 }
 
 .btn-clear:hover {
@@ -123,13 +125,12 @@ form {
     margin-block-start: 20px;
     display: flex;
     flex-wrap: wrap;
-    inline-size: 100%;
 }
 
 .items li {
     display: flex;
     justify-content: space-between;
-    inline-size: 100%;
+    inline-size: 45%;
     border: 1px solid #ccc;
     border-radius: 5px;
     padding: 10px 15px;
@@ -140,10 +141,5 @@ form {
 @media (max-width: 500px) {
     .items li {
         inline-size: 100%;
-    }
-
-
-    .container {
-        max-inline-size: 500px;
     }
 }
