@@ -52,7 +52,7 @@ products.forEach(product => {
   </div>
     `
 })
-console.log(productsHTML)
+// console.log(productsHTML)
 
 // console.log(products.length)
 
@@ -83,7 +83,16 @@ document.querySelectorAll('.add-to-cart')
             productId: productId,
             quantity: 1
         }); 
+
+        let cartQuantity = 0; // store cart quantity
+
+        cart.forEach((item) => {
+            cartQuantity += item.quantity
+        })
+
+        // console.log(cartQuantity)
+        document.querySelector('.cart-quantity').innerHTML = cartQuantity
         
-        console.log(cart)
+        // console.log(cart)
     })
  })
