@@ -1,4 +1,4 @@
-import {cart} from '../data/cart.js'
+import {cart, addToCart} from '../data/cart.js'
 import {products} from '../data/products.js'
 
 let productsHTML = ''
@@ -63,39 +63,26 @@ document.querySelector('.products-grid').innerHTML = productsHTML;
 
 // .toFixed -> converts number to string with a specified number of decimal
 
+//function update cart-quantity
+function updateCartQuantity() {
+  let cartQuantity = 0; // store cart quantity
+    cart.forEach((cartItem) => {
+        cartQuantity += cartItem.quantity
+    })
+
+    // console.log(cartQuantity)
+    document.querySelector('.cart-quantity').innerHTML = cartQuantity
+    
+    // console.log(cart)
+}
+
+
 // add to cart button
 document.querySelectorAll('.add-to-cart')
  .forEach((button) => {
     button.addEventListener('click', () => {
-        // console.log('Added product')
         const productId = button.dataset.productId
-
-        let matchingItem;
-
-        cart.forEach((item) => {
-            if (productId === item.productId) {
-                matchingItem = item
-            }
-        });
-
-        if(matchingItem) {
-            matchingItem.quantity += 1
-        } 
-
-        cart.push({
-            productId: productId,
-            quantity: 1
-        }); 
-
-        let cartQuantity = 0; // store cart quantity
-
-        cart.forEach((item) => {
-            cartQuantity += item.quantity
-        })
-
-        // console.log(cartQuantity)
-        document.querySelector('.cart-quantity').innerHTML = cartQuantity
-        
-        // console.log(cart)
+        addToCart(productId)
+        updateCartQuantity()
     })
  })
