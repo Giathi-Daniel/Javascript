@@ -45,6 +45,7 @@ header {
 header h1 {
     font-weight: 300;
     margin-inline-start: 10px;
+    color: #077170b1;
 }
 
 .edit-mode {
