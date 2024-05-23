@@ -3,14 +3,15 @@ import {products, getProduct} from '../../data/products.js'
 import {formatCurrency} from '../utils/money.js' //{formatCurrency} -> named export
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js'; //date -> default export
 import {deliveryOptions, getDeliveryOption} from '../../data/deliveryOptions.js'
+import {renderPaymentSummary} from './paymentSummary.js'
 
 
-// gat dayjs() and calculate the number of days
-const today = dayjs()
-const deliveryDate = today.add(7, 'days')
+// // gat dayjs() and calculate the number of days 
+// const today = dayjs()
+// const deliveryDate = today.add(7, 'days')
 
-// display date in easy to-read method
-console.log(deliveryDate.format('dddd, MMMM D'))
+// // display date in easy to-read method
+// console.log(deliveryDate.format('dddd, MMMM D'))
 
 // regenerate the function because to update date
 export function renderOrderSummary() {
@@ -120,6 +121,8 @@ export function renderOrderSummary() {
 
           const container = document.querySelector(`.js-item-container-${productId}`)
           container.remove()
+
+          renderPaymentSummary()
       })
   })
 
@@ -132,6 +135,7 @@ export function renderOrderSummary() {
       const {productId, deliveryOptionId} = element.dataset
       updateDeliveryOption(productId, deliveryOptionId)
       renderOrderSummary();
+      renderPaymentSummary();
     })
   })
 }
