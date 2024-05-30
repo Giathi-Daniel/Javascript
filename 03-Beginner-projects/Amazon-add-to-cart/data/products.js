@@ -60,6 +60,36 @@ class Clothing extends Product{
   }
 }
 
+
+// const date = new Date()
+// console.log(date)
+// console.log(date.toLocaleDateString())
+// console.log(date.toLocaleTimeString())
+
+// console.log(this) //no object to point to hence undefined
+
+// const object2 = {
+//   a: 2,
+//   b: this.a
+// }
+
+// console.log(object2)
+
+
+// function logThis() {
+//   console.log(this) // not inside an object, so there's nothing for "this" to point to. -> undefined
+// }
+// logThis();
+// logThis.call('hello')
+
+// const object3 = {
+//   method: () => { //arrow functions prevent method overriding
+//     console.log(this) //undefined
+//   }
+// }
+// object3.method()
+
+
 export const products = [
     {
       id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
