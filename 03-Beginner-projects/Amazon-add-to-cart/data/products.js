@@ -31,6 +31,10 @@ class Product {
   getStarsUrl() {
     return `images/ratings/${this.rating.stars * 10}.png`
   }
+
+  getPrice() {
+    return `$${formatCurrency(this.priceCents)}`;
+  }
 }
 
 export const products = [
@@ -695,5 +699,3 @@ export const products = [
 ].map((productDetails) => {
   return new Product(productDetails);
 })
-
-console.log(products)
