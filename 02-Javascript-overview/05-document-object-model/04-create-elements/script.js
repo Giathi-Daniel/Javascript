@@ -73,3 +73,5 @@ function createIcon(classes) {
     icon.className = classes
     return icon
 }
+
+// insertAdjacentElement, insertAdjacentText, insertAdjentHTML
