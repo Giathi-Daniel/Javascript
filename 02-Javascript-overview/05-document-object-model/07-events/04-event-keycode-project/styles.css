@@ -31,6 +31,8 @@ body {
 
 .key small {
     position: absolute;
+    margin-block-start: 5px;
+    margin-block-end: 2rem;
     inset-block-start: -24px;
     inset-inline-start: 0;
     text-align: center;
