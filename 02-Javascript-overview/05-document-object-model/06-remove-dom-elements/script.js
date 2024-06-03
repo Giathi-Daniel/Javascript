@@ -19,11 +19,10 @@ removeItem3(2)
 // eventListener
 const text = document.querySelector('p')
 const itemList = document.querySelector('.items')
+const btn = document.querySelector('button')
 
-
-
-document.querySelector('button').onclick = function run() {
+btn.addEventListener('click', () => {
     itemList.classList.forEach((c) => console.log(c))
-    text.classList.add('add')
-    alert()
-}
+    // text.classList.add('add')
+   text.classList.toggle('hidden')
+})
