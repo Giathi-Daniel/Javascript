@@ -17,8 +17,13 @@ const removeItem3 = (itemNumber) => document.querySelectorAll('li')[itemNumber -
 removeItem3(2)
 
 // eventListener
-function run() {
-    className = 'white'
-}
+const text = document.querySelector('p')
+const itemList = document.querySelector('.items')
 
-document.querySelector('button').onclick = run
+
+
+document.querySelector('button').onclick = function run() {
+    itemList.classList.forEach((c) => console.log(c))
+    text.classList.add('add')
+    alert()
+}
